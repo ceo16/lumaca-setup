@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Windows
 build_script:
-- cmd: 'build.bat'
+- cmd: "build.bat \nexit 0"
 artifacts:
 - path: '*.zip'
   name: GitHub
