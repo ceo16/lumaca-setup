@@ -76,24 +76,24 @@ if not "%script_type%" == "builder" (
 	
 :: ---- URLS ----
 
-set installroot_url=https://www.retrobat.ovh
+set installroot_url=https://sourceforge.net
 
 if not "%script_type%" == "builder" (
 
-	(echo archive_url=%installroot_url%/repo/%arch%/%branch%/archives)>> "%tmp_infos_file%"
+	(echo archive_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
 
 ) else (
 
 	(echo batgui_url=%installroot_url%/repo/%arch%/%branch%)>> "%tmp_infos_file%"
-	(echo batocera_ports_url=https://github.com/RetroBat-Official/emulatorlauncher/releases/download/continuous)>> "%tmp_infos_file%"	
-	(echo emulationstation_url=https://github.com/RetroBat-Official/emulationstation/releases/download/continuous-master)>> "%tmp_infos_file%"
+	(echo batocera_ports_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"	
+	(echo emulationstation_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
 	(echo emulators_url=%installroot_url%/repo/%arch%/%branch%/emulators)>> "%tmp_infos_file%"
 	(echo lrcores_url=https://buildbot.libretro.com/nightly/windows/%archx%/latest)>> "%tmp_infos_file%"
 	(echo mega_bezels_url=%installroot_url%/repo/medias)>> "%tmp_infos_file%"
 	(echo retroarch_url=https://buildbot.libretro.com/stable/%retroarch_version%/windows/%archx%)>> "%tmp_infos_file%"
-	(echo lumaca_binaries_url=%installroot_url%/repo/tools)>> "%tmp_infos_file%"
+	(echo lumaca_binaries_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
 	(echo wiimotegun_url=https://github.com/fabricecaruso/WiimoteGun/releases/download/v1.0)>> "%tmp_infos_file%"
-	(echo default_theme_url=https://github.com/fabricecaruso/es-theme-carbon/archive/refs/heads/)>> "%tmp_infos_file%"
+	(echo default_theme_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
 
 )
 

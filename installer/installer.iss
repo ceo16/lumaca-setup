@@ -20,7 +20,7 @@
 #endif
 
 #ifndef InstallRootUrl
-#define InstallRootUrl "http://www.retrobat.ovh/repo/win64"
+#define InstallRootUrl "https://sourceforge.net/projects/lumaca/files/"
 #endif
 
 #include "CodeDependencies.iss"
