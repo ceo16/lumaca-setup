@@ -7,3 +7,9 @@ artifacts:
   name: GitHub
 - path: version.info
   name: GitHub
+deploy:
+  - provider: GitHub
+    auth_token:
+      secure: aeboYYL1NtnEGgT+uR8t8NZZIrGtoxhqI95TCX2g7lYpO62JdiYkbVcq+9tKpecD
+    draft: false
+    prerelease: false
