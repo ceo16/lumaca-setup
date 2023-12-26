@@ -1,6 +1,6 @@
 version: 1.0.{build}
-image: Windows
-build_script:
+image: Visual Studio 2019
+init:
 - cmd: "build.bat \nexit 0"
 artifacts:
 - path: '*.zip'
