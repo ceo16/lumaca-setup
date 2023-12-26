@@ -707,16 +707,3 @@ REM		(echo %date% %time% [INFO] !package_name!_sha256=!file_hash! ^> "!build_pat
 
 goto :eof
 
-:: ---- EXIT ----
-
-:exit_door
-
-echo :: EXITING...
-
-if "%exit_code%" == "" (set/A exit_code=2)
-(echo %date% %time% [EXIT] !exit_code!)>> "!root_path!\build.log"
-
-if %exit_timeout% GTR 0 (timeout /t %exit_timeout%)>nul
-if %exit_timeout% EQU 0 (pause)
-
-exit !exit_code!
