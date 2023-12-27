@@ -3,7 +3,6 @@ image: Visual Studio 2019
 build_script:
 - cmd: >- 
 /system/scripts/shared-variables.cmd
-build.bat
 artifacts:
 - path: '*.zip'
   name: GitHub
