@@ -2,6 +2,8 @@ version: 1.0.{build}
 image: Visual Studio 2019
 before_build:
 - cmd: C:\projects\lumaca-setup\system\scripts\shared-variables.cmd
+build_script:
+- cmd: build.bat
 artifacts:
 - path: '*.zip'
   name: GitHub
