@@ -172,8 +172,8 @@ build_script:
 
 
     goto :eof
-deploy: off
-- cmd: >- build.bat
+
+    build.bat
 artifacts:
 - path: '*.zip'
   name: GitHub
