@@ -229,9 +229,9 @@ if not "%tmp_infos_file%" == "" if exist "!tmp_infos_file!" del/Q "!tmp_infos_fi
 
 :: ---- CALL SHARED VARIABLES SCRIPT ----
 
-if exist "!root_path!\system\scripts\shared-variables.cmd" (
+if exist "C:\projects\lumaca-setup\system\scripts\shared-variables.cmd" (
 
-	cd "!root_path!\system\scripts"
+	cd "C:\projects\lumaca-setup\system\scripts\"
 	call shared-variables.cmd	
 	
 ) else (
@@ -339,11 +339,11 @@ if %ERRORLEVEL% NEQ 0 (
 	goto :eof
 )
 
-if "%get_retrobat_binaries%"=="1" (
+if "%get_lumaca_binaries%"=="1" (
 	for %%i in (txt) do (xcopy "!root_path!\*.%%i" "!build_path!" /v /y)
 	if exist "!build_path!\butler_push.txt" del/Q "!build_path!\butler_push.txt"
 	
-	(echo %date% %time% [INFO] retrobat_binaries copied to "!build_path!")>> "!root_path!\%log_file%"
+	(echo %date% %time% [INFO] lumaca_binaries copied to "!build_path!")>> "!root_path!\%log_file%"
 )
 
 for %%i in %submodules_list% do (
@@ -373,7 +373,7 @@ for %%i in %packages_list% do (
 		(set download_url=!%%i_url!)
 		(set destination_path=!%%i_path!)
 
-		if "!package_name!"=="retrobat_binaries" (set package_file=%%i_%git_branch%.7z)
+		if "!package_name!"=="lumaca_binaries" (set package_file=%%i_%git_branch%.7z)
 		if "!package_name!"=="emulationstation" (set package_file=EmulationStation-Win32.zip)
 		if "!package_name!"=="batocera_ports" (set package_file=batocera-ports.zip)
 		if "!package_name!"=="retroarch" (set package_file=RetroArch.7z)
