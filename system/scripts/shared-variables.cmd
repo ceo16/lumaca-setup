@@ -8,7 +8,7 @@ It's not intended to run on its own but must be called by other scripts in order
 :rem
 
 :: ---- GENERAL INFOS ----
-set name=retrobat
+set name=lumaca
 (echo name=%name%)>> "%tmp_infos_file%"
 
 :: ---- PROCESSOR ARCHITECTURE INFO ----
