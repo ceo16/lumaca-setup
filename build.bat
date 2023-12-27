@@ -255,7 +255,7 @@ if exist "!tmp_infos_file!" (
 	goto :eof
 )
 
-(echo %date% %time% [INFO] Version: %name%-%retrobat_version%-%branch%)>> "!root_path!\%log_file%"
+(echo %date% %time% [INFO] Version: %name%-%lumaca_version%-%branch%)>> "!root_path!\%log_file%"
 (echo %date% %time% [INFO] Build Path: "!build_path!")>> "!root_path!\%log_file%"
 (echo %date% %time% [INFO] Download Path: "!download_path!")>> "!root_path!\%log_file%"
 
@@ -436,7 +436,7 @@ set task=set_config
 
 echo :: SETTING CONFIG FILES...
 
-for /f "usebackq delims=" %%x in ("%system_path%\configgen\retrobat_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
+for /f "usebackq delims=" %%x in ("%system_path%\configgen\lumaca_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\emulators_names.lst") do (if not exist "!build_path!\emulators\%%x\." md "!build_path!\emulators\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\roms\%%x\." md "!build_path!\roms\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\saves\%%x\." md "!build_path!\saves\%%x")
