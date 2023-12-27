@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2019
 before_build:
-- cmd: shared-variables.cmd
+- cmd: /system/scripts/shared-variables.cmd
 artifacts:
 - path: '*.zip'
   name: GitHub
