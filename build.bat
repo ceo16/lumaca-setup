@@ -116,7 +116,7 @@ if %user_choice% NEQ 0 (
 call :banner
 
 echo  This script can help you to download all the required 
-echo  softwares and build the RetroBat Setup with the NullSoft 
+echo  softwares and build the Lumaca Setup with the NullSoft 
 echo  Scriptable Install System.
 echo +===========================================================+
 echo  (1) - full compilation
@@ -229,9 +229,9 @@ if not "%tmp_infos_file%" == "" if exist "!tmp_infos_file!" del/Q "!tmp_infos_fi
 
 :: ---- CALL SHARED VARIABLES SCRIPT ----
 
-if exist "C:\projects\lumaca-setup\system\scripts\shared-variables.cmd" (
+if exist "!root_path!\system\scripts\shared-variables.cmd" (
 
-	cd "C:\projects\lumaca-setup\system\scripts\"
+	cd "!root_path!\system\scripts"
 	call shared-variables.cmd	
 	
 ) else (
@@ -354,7 +354,7 @@ for %%i in %submodules_list% do (
 		(set destination_path=!%%i_path!)
 	
 		if "!package_name!"=="bios" (set folder=bios)
-		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\es-theme-carbon)
+		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\Hypermax-plus+_VMan)
 		if "!package_name!"=="decorations" (set folder=system\decorations)
 		if "!package_name!"=="system" (set folder=system)
 		
@@ -380,7 +380,7 @@ for %%i in %packages_list% do (
 		if "!package_name!"=="wiimotegun" (set package_file=WiimoteGun.zip)
 		if "!package_name!"=="default_theme" (set package_file=master.zip)
 		
-
+                call :download
 		call :extract		
 	)
 )
@@ -472,9 +472,9 @@ if not exist "!build_path!\system\version.info" (
 	(set timestamp=%date:~6,4%%date:~3,2%%date:~0,2%)
 	
 	if "%branch%" == "stable" (
-		(set release_version=%retrobat_version%-%branch%-%arch%)
+		(set release_version=%lumaca_version%-%branch%-%arch%)
 	) else (
-		(set release_version=%retrobat_version%-!timestamp!-%branch%-%arch%)
+		(set release_version=%lumaca_version%-!timestamp!-%branch%-%arch%)
 	)
 	
 	(echo|set/P=!release_version!)> "!build_path!\system\version.info"	
@@ -566,8 +566,8 @@ echo :: PUSHING BUTLER...
 call :check_version
 
 if exist "!build_path!\system\version.info" (
-	butler push "!build_path!\%name%-v%release_version%-setup.exe" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
-	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push "!build_path!\%name%-v%release_version%-setup.exe" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
 	(set/A exit_code=%ERRORLEVEL%)
 )
 
@@ -707,4 +707,16 @@ REM		(echo %date% %time% [INFO] !package_name!_sha256=!file_hash! ^> "!build_pat
 
 goto :eof
 
+:: ---- EXIT ----
 
+:exit_door
+
+echo :: EXITING...
+
+if "%exit_code%" == "" (set/A exit_code=2)
+(echo %date% %time% [EXIT] !exit_code!)>> "!root_path!\build.log"
+
+if %exit_timeout% GTR 0 (timeout /t %exit_timeout%)>nul
+if %exit_timeout% EQU 0 (pause)
+
+exit !exit_code!
