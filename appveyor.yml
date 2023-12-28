@@ -2,7 +2,10 @@ version: 1.0.{build}
 # Maximum number of concurrent jobs for the project
 max_jobs: 1
 image: Visual Studio 2019
-  
+  environment:
+  APPVEYOR_RDP_PASSWORD: VolvoC30!
+init:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 # clone directory
 clone_folder: c:\src\Lumaca-setup
 
