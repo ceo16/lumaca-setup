@@ -8,7 +8,7 @@ It's not intended to run on its own but must be called by other scripts in order
 :rem
 
 :: ---- GENERAL INFOS ----
-set name=retrobat
+set name=lumaca
 (echo name=%name%)>> "%tmp_infos_file%"
 
 :: ---- PROCESSOR ARCHITECTURE INFO ----
@@ -85,15 +85,15 @@ if not "%script_type%" == "builder" (
 ) else (
 
 	(echo batgui_url=%installroot_url%/repo/%arch%/%branch%)>> "%tmp_infos_file%"
-	(echo batocera_ports_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"	
-	(echo emulationstation_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
+	(echo batocera_ports_url=https://github.com/ceo16/emulatorlauncher-lumaca/releases/download/continuous/)>> "%tmp_infos_file%"	
+	(echo emulationstation_url=https://github.com/ceo16/emulationstation/releases/download/continuous/)>> "%tmp_infos_file%"
 	(echo emulators_url=%installroot_url%/repo/%arch%/%branch%/emulators)>> "%tmp_infos_file%"
 	(echo lrcores_url=https://buildbot.libretro.com/nightly/windows/%archx%/latest)>> "%tmp_infos_file%"
 	(echo mega_bezels_url=%installroot_url%/repo/medias)>> "%tmp_infos_file%"
 	(echo retroarch_url=https://buildbot.libretro.com/stable/%retroarch_version%/windows/%archx%)>> "%tmp_infos_file%"
 	(echo lumaca_binaries_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
 	(echo wiimotegun_url=https://github.com/fabricecaruso/WiimoteGun/releases/download/v1.0)>> "%tmp_infos_file%"
-	(echo default_theme_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
+	(echo default_theme_url=https://github.com/ceo16/es-theme-carbon/releases/download/continuous/)>> "%tmp_infos_file%"
 
 )
 
