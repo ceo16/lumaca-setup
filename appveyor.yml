@@ -3,7 +3,7 @@ version: 1.0.{build}
 max_jobs: 1
 image: Visual Studio 2019
 environment:
-  APPVEYOR_RDP_PASSWORD: VolvoC30
+  APPVEYOR_RDP_PASSWORD: VolvoC30!
 # clone directory
 clone_folder: c:\src\Lumaca-setup
 
