@@ -354,7 +354,7 @@ for %%i in %submodules_list% do (
 		(set destination_path=!%%i_path!)
 	
 		if "!package_name!"=="bios" (set folder=bios)
-		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\Hypermax-plus+_VMan)
+		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\es-theme-carbon-master)
 		if "!package_name!"=="decorations" (set folder=system\decorations)
 		if "!package_name!"=="system" (set folder=system)
 		

@@ -1,0 +1,15 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+build_script:
+- cmd: build.bat
+artifacts:
+- path: '*.zip'
+  name: GitHub
+- path: version.info
+  name: GitHub
+deploy:
+  - provider: GitHub
+    auth_token:
+      secure: aeboYYL1NtnEGgT+uR8t8NZZIrGtoxhqI95TCX2g7lYpO62JdiYkbVcq+9tKpecD
+    draft: false
+    prerelease: false
