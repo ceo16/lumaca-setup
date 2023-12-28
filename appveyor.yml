@@ -1,6 +1,12 @@
 version: 1.0.{build}
+# Maximum number of concurrent jobs for the project
+max_jobs: 1
 image: Visual Studio 2019
+# clone directory
+clone_folder: c:\src\Lumaca-setup
+
 build_script:
+- cd c:\src\Lumaca-setup
 - cmd: build.bat
 artifacts:
 - path: '*.zip'
