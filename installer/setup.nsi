@@ -12,7 +12,7 @@ Unicode true
 !define PRODUCT "Lumaca"
 !define FILENAME "Lumaca"
 ;!define BRANCH "stable"
-;!define PRODUCT_VERSION "1.0.0"
+;!define PRODUCT_VERSION "5.0.0"
 !define VERSION "${RELEASE_VERSION}"
 ;!define /date TIMESTAMP "%Y%m%d%H%M"
 ;!define /date TIMESTAMP2 "%Y/%m/%d %H:%M:%S"
@@ -23,7 +23,7 @@ Unicode true
 !define BASE_TARGET "$(^Name)"
 !define RESOURCES_PATH ".\resources"
 
-!define SETUP_VERSION "1.0.0.0"
+!define SETUP_VERSION "6.0.0.0"
 
 VIAddVersionKey "ProductName" "${PRODUCT}"
 VIAddVersionKey "CompanyName" "${PRODUCT}"

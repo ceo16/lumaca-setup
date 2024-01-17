@@ -1,7 +1,7 @@
 \system\resources\emulationstation\notice.pdf|\emulationstation\.emulationstation\notice.pdf
 \system\resources\emulationstation\progress.png|\emulationstation\resources\progress.png
 \system\resources\emulationstation\splash.xml|\emulationstation\resources\splash.xml
-\system\resources\next generation.png|\emulationstation\resources\next generation.png
+\system\resources\next generation.svg|\emulationstation\resources\next generation.svg
 \system\templates\ares\settings.bml|\emulators\ares\settings.bml
 \system\templates\bigpemu\userdata\BigPEmuConfig.bigpcfg|\emulators\bigpemu\userdata\BigPEmuConfig.bigpcfg
 \system\templates\bizhawk\config.ini|\emulators\bizhawk\config.ini
@@ -30,6 +30,7 @@
 \system\templates\emulationstation\es_padtokey.cfg|\emulationstation\.emulationstation\es_padtokey.cfg
 \system\templates\emulationstation\es_settings.cfg|\emulationstation\.emulationstation\es_settings.cfg
 \system\templates\flycast\emu.cfg|\emulators\flycast\emu.cfg
+\system\templates\gzdoom\gzdoom_portable.ini|\emulators\gzdoom\gzdoom_portable.ini
 \system\templates\hatari\hatari.cfg|\emulators\hatari\hatari.cfg
 \system\templates\hbmame\ctrlr\ds4_ds5.cfg|\saves\hbmame\ctrlr\ds4_ds5.cfg
 \system\templates\hbmame\ctrlr\switch_pro.cfg|\saves\hbmame\ctrlr\switch_pro.cfg

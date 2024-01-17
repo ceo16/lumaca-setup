@@ -2,7 +2,7 @@ goto:rem
 ---------------------------------------
 shared-variables.cmd
 ---------------------------------------
-This Batch script is originally created for RetroBat.
+This Batch script is originally created for Lumaca.
 It's not intended to run on its own but must be called by other scripts in order to share some common information required by them.
 ---------------------------------------
 :rem
@@ -20,7 +20,7 @@ if "%archx%"=="x86" (set arch=win32)
 (echo archx=%archx%)>> "%tmp_infos_file%"
 (echo arch=%arch%)>> "%tmp_infos_file%"
 
-:: ---- RETROBAT PATHS ----
+:: ---- LUMACA PATHS ----
 
 (set build_path=!root_path!\build)
 (echo build_path=!root_path!\build)>> "%tmp_infos_file%"
@@ -76,22 +76,22 @@ if not "%script_type%" == "builder" (
 	
 :: ---- URLS ----
 
-set installroot_url=https://sourceforge.net
+set installroot_url=https://www.lumaca.ovh
 
 if not "%script_type%" == "builder" (
 
-	(echo archive_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
+	(echo archive_url=%installroot_url%/repo/%arch%/%branch%/archives)>> "%tmp_infos_file%"
 
 ) else (
 
-	(echo batgui_url=%installroot_url%/repo/%arch%/%branch%)>> "%tmp_infos_file%"
-	(echo batocera_ports_url=https://github.com/ceo16/emulatorlauncher-lumaca/releases/download/continuous/)>> "%tmp_infos_file%"	
+	(echo batgui_url=https://www.retrobat.ovh/repo/%arch%/%branch%)>> "%tmp_infos_file%"
+	(echo batocera_ports_url=https://github.com/ceo16/emulatorlauncher/releases/download/continuous/)>> "%tmp_infos_file%"	
 	(echo emulationstation_url=https://github.com/ceo16/emulationstation/releases/download/continuous/)>> "%tmp_infos_file%"
-	(echo emulators_url=%installroot_url%/repo/%arch%/%branch%/emulators)>> "%tmp_infos_file%"
+	(echo emulators_url=www.retrobat.ovh/repo/%arch%/%branch%/emulators)>> "%tmp_infos_file%"
 	(echo lrcores_url=https://buildbot.libretro.com/nightly/windows/%archx%/latest)>> "%tmp_infos_file%"
 	(echo mega_bezels_url=%installroot_url%/repo/medias)>> "%tmp_infos_file%"
 	(echo retroarch_url=https://buildbot.libretro.com/stable/%retroarch_version%/windows/%archx%)>> "%tmp_infos_file%"
-	(echo lumaca_binaries_url=%installroot_url%/projects/lumaca/files/)>> "%tmp_infos_file%"
+	(echo lumaca_binaries_url=%installroot_url%/repo/tools)>> "%tmp_infos_file%"
 	(echo wiimotegun_url=https://github.com/fabricecaruso/WiimoteGun/releases/download/v1.0)>> "%tmp_infos_file%"
 	(echo default_theme_url=https://github.com/ceo16/es-theme-carbon/releases/download/continuous/)>> "%tmp_infos_file%"
 

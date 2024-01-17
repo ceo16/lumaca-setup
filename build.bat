@@ -12,7 +12,7 @@ to set the default configuration and to build the setup from sources.
 
 :: ---- BUILDER OPTION ----
 
-set lumaca_version=1.0.0
+set lumaca_version=6.0.0
 set retroarch_version=1.16.0
 
 set get_batgui=0
@@ -566,8 +566,8 @@ echo :: PUSHING BUTLER...
 call :check_version
 
 if exist "!build_path!\system\version.info" (
-	butler push "!build_path!\%name%-v%release_version%-setup.exe" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
-	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push "!build_path!\%name%-v%release_version%-setup.exe" ceo16/lumacaofficial:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" ceo16/lumacaofficial:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
 	(set/A exit_code=%ERRORLEVEL%)
 )
 

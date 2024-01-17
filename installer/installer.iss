@@ -8,7 +8,7 @@
 #define public Dependency_NoExampleSetup
 
 #ifndef MyAppVersion
-#define MyAppVersion "1.0"
+#define MyAppVersion "6.0"
 #endif
 
 #ifndef MyAppArchitecture
@@ -20,7 +20,7 @@
 #endif
 
 #ifndef InstallRootUrl
-#define InstallRootUrl "https://sourceforge.net/projects/lumaca/files/"
+#define InstallRootUrl "http://www.lumaca.ovh/repo/win64"
 #endif
 
 #include "CodeDependencies.iss"
