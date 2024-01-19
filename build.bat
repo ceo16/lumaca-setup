@@ -49,7 +49,7 @@ set emulators_black_list=(3dsen pico8 retroarch ryujinx steam teknoparrot yuzu y
 :: ---- GET STARTED ----
 
 set script_type=builder
-set user_choice=0
+set user_choice=1
 set git_branch=master
 set branch=beta
 set release_version=null
@@ -111,79 +111,7 @@ if %user_choice% NEQ 0 (
 	)
 )
 
-:: ---- UI ----
 
-call :banner
-
-echo  This script can help you to download all the required 
-echo  softwares and build the Lumaca Setup with the NullSoft 
-echo  Scriptable Install System.
-echo +===========================================================+
-echo  (1) - full compilation
-echo  (2) - download, configure
-echo  (3) - build setup executable
-echo  (4) - archive
-if exist "!root_path!\butler_push.txt" echo  (5) - push
-echo  (Q) - Quit
-echo 1 |
-echo +===========================================================+
-if not exist "!root_path!\butler_push.txt" choice /C 1234Q /N /T 20 /D 1 /M "Please type your choice here: "
-if exist "!root_path!\butler_push.txt" choice /C 12345Q /N /T 20 /D 1 /M "Please type your choice here: "
-echo +===========================================================+
-set user_choice=1
-
-if %user_choice% EQU 1 (
-
-	call :get_packages
-	call :set_config
-	call :build_setup
-	call :create_archive
-	call :exit_door
-	goto :eof
-)
-
-if %user_choice% EQU 2 (
-
-	call :get_packages
-	call :set_config
-	call :exit_door
-	goto :eof
-)
-
-if %user_choice% EQU 3 (
-
-	call :build_setup
-	call :exit_door
-	goto :eof
-)
-
-if %user_choice% EQU 4 (
-
-	call :create_archive
-	call :exit_door
-	goto :eof
-)
-
-if not exist "!root_path!\butler_push.txt" if %user_choice% EQU 5 (
-
-	(set exit_code=0)
-	call :exit_door
-	goto :eof
-)
-
-if exist "!root_path!\butler_push.txt" if %user_choice% EQU 5 (
-
-	call :butler_push
-	call :exit_door
-	goto :eof
-)
-
-if exist "!root_path!\butler_push.txt" if %user_choice% EQU 6 (
-
-	(set exit_code=0)
-	call :exit_door
-	goto :eof
-)
 
 :: ---- LABELS ----
 
