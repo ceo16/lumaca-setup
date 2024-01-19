@@ -125,6 +125,7 @@ echo  (3) - build setup executable
 echo  (4) - archive
 if exist "!root_path!\butler_push.txt" echo  (5) - push
 echo  (Q) - Quit
+echo 1 |
 echo +===========================================================+
 if not exist "!root_path!\butler_push.txt" choice /C 1234Q /N /T 20 /D 1 /M "Please type your choice here: "
 if exist "!root_path!\butler_push.txt" choice /C 12345Q /N /T 20 /D 1 /M "Please type your choice here: "
