@@ -430,12 +430,11 @@ goto :eof
 :: ---- SET RETROBAT CONFIG ----
 
 :set_config
-C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd
 set task=set_config
 (echo %date% %time% [LABEL] :!task!)>> "!root_path!\%log_file%"
 
 echo :: SETTING CONFIG FILES...
-
+C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\lumaca_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\emulators_names.lst") do (if not exist "!build_path!\emulators\%%x\." md "!build_path!\emulators\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\roms\%%x\." md "!build_path!\roms\%%x")
