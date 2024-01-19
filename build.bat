@@ -232,7 +232,7 @@ if not "%tmp_infos_file%" == "" if exist "!tmp_infos_file!" del/Q "!tmp_infos_fi
 if exist "C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd" (
 
 	cd "C:\Users\appveyor\projects\lumaca-setup\system\scripts"
-	call shared-variables.cmd	
+	 shared-variables.cmd	
 	
 ) else (
 
