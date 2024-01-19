@@ -129,7 +129,7 @@ echo +===========================================================+
 if not exist "!root_path!\butler_push.txt" choice /C 1234Q /N /T 20 /D 1 /M "Please type your choice here: "
 if exist "!root_path!\butler_push.txt" choice /C 12345Q /N /T 20 /D 1 /M "Please type your choice here: "
 echo +===========================================================+
-set user_choice=%ERRORLEVEL%
+set user_choice=1
 
 if %user_choice% EQU 1 (
 
