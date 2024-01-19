@@ -430,7 +430,7 @@ goto :eof
 :: ---- SET RETROBAT CONFIG ----
 
 :set_config
-
+C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd
 set task=set_config
 (echo %date% %time% [LABEL] :!task!)>> "!root_path!\%log_file%"
 
