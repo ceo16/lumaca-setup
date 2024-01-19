@@ -49,7 +49,7 @@ set emulators_black_list=(3dsen pico8 retroarch ryujinx steam teknoparrot yuzu y
 :: ---- GET STARTED ----
 
 set script_type=builder
-set user_choice=0
+set user_choice=1
 set git_branch=master
 set branch=beta
 set release_version=null
