@@ -1,7 +1,7 @@
 @echo off
 goto:rem
 ***************************************
-This file is part of RetroBat Scripts.
+This file is part of Lumaca Scripts.
 ***************************************
 :rem
 for /f "delims=" %%x in (%setup_dir%\system\setup.info) do (set "%%x")

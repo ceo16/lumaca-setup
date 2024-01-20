@@ -264,7 +264,7 @@ set imgext=iso
 set guspath=..\..\roms\dos\ultrasnd
 
 echo ****************************
-echo  Running DOSBox on RetroBat
+echo  Running DOSBox on Lumaca
 echo ****************************
 
 mount c "%diskpath%" -freesize 1000

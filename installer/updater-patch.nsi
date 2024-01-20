@@ -1,7 +1,7 @@
 /*
 ********************************
 
-  RetroBat Updater Patch NSIS Script
+  Lumaca Updater Patch NSIS Script
 
 ********************************
 */

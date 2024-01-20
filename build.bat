@@ -5,7 +5,7 @@ goto:rem
 ---------------------------------------
 build.bat
 ---------------------------------------
-This batch script is made to help download all the required software for RetroBat,
+This batch script is made to help download all the required software for Lumaca,
 to set the default configuration and to build the setup from sources.
 ---------------------------------------
 :rem
@@ -427,7 +427,7 @@ if "%get_emulators%"=="1" (
 
 goto :eof
 
-:: ---- SET RETROBAT CONFIG ----
+:: ---- SET LUMACA CONFIG ----
 
 :set_config
 set task=set_config
@@ -485,14 +485,14 @@ echo build version is: !release_version!
 
 goto :eof
 
-:: ---- BUILD RETROBAT SETUP ----
+:: ---- BUILD LUMACA SETUP ----
 
 :build_setup
 
 set task=build_setup
 (echo %date% %time% [LABEL] :!task!)>> "!root_path!\%log_file%"
 
-echo :: BUILDING RETROBAT SETUP...
+echo :: BUILDING LUMACA SETUP...
 
 call :check_version
 
