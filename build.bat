@@ -227,12 +227,13 @@ if not "!custom_config!" == "" if exist "!root_path!\!custom_config!" (
 set tmp_infos_file=!root_path!\rb_infos.tmp
 if not "%tmp_infos_file%" == "" if exist "!tmp_infos_file!" del/Q "!tmp_infos_file!"
 
+
 :: ---- CALL SHARED VARIABLES SCRIPT ----
 
-if exist "C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd" (
+if exist "!root_path!\system\scripts\shared-variables.cmd" (
 
-	cd "C:\Users\appveyor\projects\lumaca-setup\system\scripts"
-	call "C:\Users\appveyor\projects\lumaca-setup\system\scripts\shared-variables.cmd"	
+	cd "!root_path!\system\scripts"
+	call shared-variables.cmd	
 	
 ) else (
 
@@ -354,7 +355,7 @@ for %%i in %submodules_list% do (
 		(set destination_path=!%%i_path!)
 	
 		if "!package_name!"=="bios" (set folder=bios)
-		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\es-theme-carbon-master)
+		if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\es-theme-carbon)
 		if "!package_name!"=="decorations" (set folder=system\decorations)
 		if "!package_name!"=="system" (set folder=system)
 		
@@ -435,7 +436,6 @@ set task=set_config
 
 echo :: SETTING CONFIG FILES...
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\lumaca_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
-for /f "usebackq delims=" %%x in ("%system_path%\configgen\templates_files.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\emulators_names.lst") do (if not exist "!build_path!\emulators\%%x\." md "!build_path!\emulators\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\roms\%%x\." md "!build_path!\roms\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\saves\%%x\." md "!build_path!\saves\%%x")

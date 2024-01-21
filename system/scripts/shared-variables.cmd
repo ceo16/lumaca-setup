@@ -93,7 +93,7 @@ if not "%script_type%" == "builder" (
 	(echo retroarch_url=https://buildbot.libretro.com/stable/%retroarch_version%/windows/%archx%)>> "%tmp_infos_file%"
 	(echo lumaca_binaries_url=%installroot_url%/repo/tools)>> "%tmp_infos_file%"
 	(echo wiimotegun_url=https://github.com/fabricecaruso/WiimoteGun/releases/download/v1.0)>> "%tmp_infos_file%"
-	(echo default_theme_url=https://github.com/ceo16/es-theme-carbon/releases/download/continuous/)>> "%tmp_infos_file%"
+	(echo default_theme_url=https://github.com/LUMACA-srl/es-theme-carbon/releases/download/continuous/)>> "%tmp_infos_file%"
 
 )
 

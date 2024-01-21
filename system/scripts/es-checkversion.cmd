@@ -135,7 +135,7 @@ if not "%tmp_infos_file%" == "" if exist "%tmp_infos_file%" del/Q "%tmp_infos_fi
 
 :: ---- PING TEST ----
 
-ping www.retrobat.ovh >nul
+ping www.lumaca.ovh >nul
 if %ERRORLEVEL% NEQ 0 (exit 1)
 
 :: ---- CALL SHARED VARIABLES SCRIPT ----
