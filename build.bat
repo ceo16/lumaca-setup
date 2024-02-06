@@ -12,7 +12,7 @@ to set the default configuration and to build the setup from sources.
 
 :: ---- BUILDER OPTION ----
 
-set retrobat_version=6.0.0
+set lumaca_version=6.0.0
 set retroarch_version=1.16.0
 
 set get_batgui=0
@@ -24,7 +24,7 @@ set get_emulationstation=1
 set get_emulators=0
 set get_lrcores=1
 set get_retroarch=1
-set get_retrobat_binaries=1
+set get_lumaca_binaries=1
 set get_system=1
 set get_wiimotegun=1
 
@@ -42,7 +42,7 @@ set setup_compiler=ISCC
 
 set deps_list=(git !setup_compiler! 7za wget curl)
 set submodules_list=(bios decorations system)
-set packages_list=(retrobat_binaries batgui emulationstation default_theme batocera_ports mega_bezels retroarch roms wiimotegun)
+set packages_list=(lumaca_binaries batgui emulationstation default_theme batocera_ports mega_bezels retroarch roms wiimotegun)
 set legacy_cores_list=(4do emuscv fake08 hatarib imageviewer mame2014 mame2016)
 set emulators_black_list=(3dsen magicengine pico8 retroarch ryujinx steam teknoparrot yuzu yuzu-early-access)
 
@@ -51,7 +51,7 @@ set emulators_black_list=(3dsen magicengine pico8 retroarch ryujinx steam teknop
 set script_type=builder
 set user_choice=0
 set git_branch=master
-set branch=stable
+set branch=beta
 set release_version=null
 set log_file=build.log
 set exit_timeout=0
@@ -255,7 +255,7 @@ if exist "!tmp_infos_file!" (
 	goto :eof
 )
 
-(echo %date% %time% [INFO] Version: %name%-%retrobat_version%-%branch%)>> "!root_path!\%log_file%"
+(echo %date% %time% [INFO] Version: %name%-%lumaca_version%-%branch%)>> "!root_path!\%log_file%"
 (echo %date% %time% [INFO] Build Path: "!build_path!")>> "!root_path!\%log_file%"
 (echo %date% %time% [INFO] Download Path: "!download_path!")>> "!root_path!\%log_file%"
 
@@ -339,11 +339,11 @@ if %ERRORLEVEL% NEQ 0 (
 	goto :eof
 )
 
-if "%get_retrobat_binaries%"=="1" (
+if "%get_lumaca_binaries%"=="1" (
 	for %%i in (txt) do (xcopy "!root_path!\*.%%i" "!build_path!" /v /y)
 	if exist "!build_path!\butler_push.txt" del/Q "!build_path!\butler_push.txt"
 	
-	(echo %date% %time% [INFO] retrobat_binaries copied to "!build_path!")>> "!root_path!\%log_file%"
+	(echo %date% %time% [INFO] lumaca_binaries copied to "!build_path!")>> "!root_path!\%log_file%"
 )
 
 for %%i in %submodules_list% do (
@@ -373,7 +373,7 @@ for %%i in %packages_list% do (
 		(set download_url=!%%i_url!)
 		(set destination_path=!%%i_path!)
 
-		if "!package_name!"=="retrobat_binaries" (set package_file=%%i_%git_branch%.7z)
+		if "!package_name!"=="lumaca_binaries" (set package_file=%%i_%git_branch%.7z)
 		if "!package_name!"=="emulationstation" (set package_file=EmulationStation-Win32.zip)
 		if "!package_name!"=="batocera_ports" (set package_file=batocera-ports.zip)
 		if "!package_name!"=="retroarch" (set package_file=RetroArch.7z)
@@ -437,16 +437,16 @@ set task=set_config
 
 echo :: SETTING CONFIG FILES...
 
-for /f "usebackq delims=" %%x in ("%system_path%\configgen\retrobat_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
+for /f "usebackq delims=" %%x in ("%system_path%\configgen\lumaca_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\emulators_names.lst") do (if not exist "!build_path!\emulators\%%x\." md "!build_path!\emulators\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\roms\%%x\." md "!build_path!\roms\%%x")
 for /f "usebackq delims=" %%x in ("%system_path%\configgen\systems_names.lst") do (if not exist "!build_path!\saves\%%x\." md "!build_path!\saves\%%x")
 
-if exist "!build_path!\retrobat.exe" (
+if exist "!build_path!\lumaca.exe" (
 
-	"!build_path!\retrobat.exe" /NOF #GetConfigFiles
-	"!build_path!\retrobat.exe" /NOF #SetEmulationStationSettings
-	"!build_path!\retrobat.exe" /NOF #SetEmulatorsSettings
+	"!build_path!\lumaca.exe" /NOF #GetConfigFiles
+	"!build_path!\lumaca.exe" /NOF #SetEmulationStationSettings
+	"!build_path!\lumaca.exe" /NOF #SetEmulatorsSettings
 	
 	if %ERRORLEVEL% NEQ 0 (
 		(set/A exit_code=%ERRORLEVEL%)
@@ -461,7 +461,7 @@ if exist "!build_path!\retrobat.exe" (
 	goto :eof	
 )
 
-if exist "!build_path!\retrobat.ini" del/Q "!build_path!\retrobat.ini"
+if exist "!build_path!\lumaca.ini" del/Q "!build_path!\lumaca.ini"
 
 if exist "!system_path!\templates\emulationstation\es_features.locale\." xcopy "!system_path!\templates\emulationstation\es_features.locale" "!emulationstation_path!\es_features.locale\" /s /e /v /y
 
@@ -473,9 +473,9 @@ if not exist "!build_path!\system\version.info" (
 	(set timestamp=%date:~6,4%%date:~3,2%%date:~0,2%)
 	
 	if "%branch%" == "stable" (
-		(set release_version=%retrobat_version%-%branch%-%arch%)
+		(set release_version=%lumaca_version%-%branch%-%arch%)
 	) else (
-		(set release_version=%retrobat_version%-!timestamp!-%branch%-%arch%)
+		(set release_version=%lumaca_version%-!timestamp!-%branch%-%arch%)
 	)
 	
 	(echo|set/P=!release_version!)> "!build_path!\system\version.info"	
@@ -567,8 +567,8 @@ echo :: PUSHING BUTLER...
 call :check_version
 
 if exist "!build_path!\system\version.info" (
-	butler push "!build_path!\%name%-v%release_version%-setup.exe" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
-	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push "!build_path!\%name%-v%release_version%-setup.exe" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+	butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
 	(set/A exit_code=%ERRORLEVEL%)
 )
 

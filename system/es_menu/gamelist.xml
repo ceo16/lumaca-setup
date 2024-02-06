@@ -420,7 +420,7 @@
 	<game>
 		<path>./project64.menu</path>
 		<name>Project 64 (Nintendo 64)</name>
-		<desc>Run Project 64 (Nintendo 64). This software is not provided by RetroBat. You can download it here: https://www.pj64-emu.com/windows-downloads</desc>
+		<desc>Run Project 64 (Nintendo 64). This software is not provided by Lumaca. You can download it here: https://www.pj64-emu.com/windows-downloads</desc>
 		<image>./media/project64-logo.png</image>
 		<marquee>./media/project64-logo.png</marquee>
 		<rating>0</rating>
@@ -777,7 +777,7 @@
 	<game>
 		<path>./pico8.menu</path>
 		<name>PICO-8</name>
-		<desc>Run PICO-8 (Fantasy Console). This software is not provided by RetroBat. You can purchase it there: https://lexaloffle.itch.io/pico-8/</desc>
+		<desc>Run PICO-8 (Fantasy Console). This software is not provided by Lumaca. You can purchase it there: https://lexaloffle.itch.io/pico-8/</desc>
 		<image>./media/pico8-logo.png</image>
 		<marquee>./media/pico8-logo.png</marquee>
 		<rating>0</rating>
@@ -862,7 +862,7 @@
 	<game>
 		<path>./ryujinx.menu</path>
 		<name>Ryujinx (Switch)</name>
-		<desc>Run Ryujinx (Switch). This software is not provided by RetroBat. You can download it here: https://ryujinx.org/download</desc>
+		<desc>Run Ryujinx (Switch). This software is not provided by Lumaca. You can download it here: https://ryujinx.org/download</desc>
 		<image>./media/ryujinx-logo.png</image>
 		<marquee>./media/ryujinx-logo.png</marquee>
 		<rating>0</rating>
@@ -913,7 +913,7 @@
 	<game>
 		<path>./yuzu.menu</path>
 		<name>Yuzu (Switch)</name>
-		<desc>Run Yuzu (Switch). This software is not provided by RetroBat. You can download it here: https://yuzu-emu.org/downloads/</desc>
+		<desc>Run Yuzu (Switch). This software is not provided by Lumaca. You can download it here: https://yuzu-emu.org/downloads/</desc>
 		<image>./media/yuzu-logo.png</image>
 		<marquee>./media/yuzu-logo.png</marquee>
 		<rating>0</rating>
@@ -930,7 +930,7 @@
 	<game>
 		<path>./yuzu-early-access.menu</path>
 		<name>Yuzu Early Access (Switch)</name>
-		<desc>Run Yuzu Early Access (Switch). This software is not provided by RetroBat.</desc>
+		<desc>Run Yuzu Early Access (Switch). This software is not provided by Lumaca.</desc>
 		<image>./media/yuzuEA-logo.png</image>
 		<marquee>./media/yuzuEA-logo.png</marquee>
 		<rating>0</rating>
@@ -1014,7 +1014,7 @@
 	<game>
 		<path>./3dsen.menu</path>
 		<name>3DSen (NES 3D)</name>
-		<desc>Run 3DSen (nes 3D). This software is not provided by RetroBat. You can purshase it here: https://geod.itch.io/3dsenpc/</desc>
+		<desc>Run 3DSen (nes 3D). This software is not provided by Lumaca. You can purshase it here: https://geod.itch.io/3dsenpc/</desc>
 		<image>./media/3dsen-logo.png</image>
 		<marquee>./media/3dsen-logo.png</marquee>
 		<rating>0</rating>
@@ -1031,7 +1031,7 @@
 	<game>
 		<path>./teknoparrot.menu</path>
 		<name>TeknoParrot (Arcade)</name>
-		<desc>Run TeknoParrot (Arcade). This software is not provided by RetroBat. You can download it here: https://teknoparrot.com/Home/Download</desc>
+		<desc>Run TeknoParrot (Arcade). This software is not provided by Lumaca. You can download it here: https://teknoparrot.com/Home/Download</desc>
 		<image>./media/teknoparrot-logo.png</image>
 		<marquee>./media/teknoparrot-logo.png</marquee>
 		<rating>0</rating>
