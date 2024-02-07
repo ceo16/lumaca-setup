@@ -9,11 +9,11 @@ Facebook Group: https://www.facebook.com/groups/retrobat
 
 ++ Introduction ++
 
-Lumaca is designed to automatically configure EmulationStation’s frontend interface with RetroArch and other stand alone emulators.
+RetroBat is designed to automatically configure EmulationStation’s frontend interface with RetroArch and other stand alone emulators.
 
 With it you will be able to quickly run games from many compatible ROM collections. This saves hours of configuration and installation time, leaving you free to play your favourite retro games.
 
-Lumaca automatically downloads and installs all the relevant software needed to have the best retro gaming experience on your Windows PC.
+RetroBat automatically downloads and installs all the relevant software needed to have the best retro gaming experience on your Windows PC.
 
 Lumaca can also run in Portable Mode. This means you can play games from an external hard drive or from any removable storage device, as long as the computer meets the minimum requirements.
 
