@@ -2,7 +2,7 @@ RETROBAT LICENCE
 
 Lumaca is a Windows softwares distribution dedicated to retrogaming and emulation.
 
-Copyright (c) 2017-2019 ceo16 "Ceo"
+Copyright (c) 2017-2019 Adrien Chalard "Kayl"
 Copyright (c) 2020-2023 RetroBat Team
 
 Lumaca is free and open source project. It should not be used for commercial purposes. 
