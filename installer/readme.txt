@@ -15,7 +15,7 @@ With it you will be able to quickly run games from many compatible ROM collectio
 
 RetroBat automatically downloads and installs all the relevant software needed to have the best retro gaming experience on your Windows PC.
 
-Lumaca can also run in Portable Mode. This means you can play games from an external hard drive or from any removable storage device, as long as the computer meets the minimum requirements.
+RetroBat can also run in Portable Mode. This means you can play games from an external hard drive or from any removable storage device, as long as the computer meets the minimum requirements.
 
 ++ System requirements ++
 
