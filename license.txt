@@ -1,4 +1,4 @@
-Lumaca LICENCE
+-- LUMACA LICENSE --
 
 Lumaca is a Windows softwares distribution dedicated to retrogaming and emulation.
 
