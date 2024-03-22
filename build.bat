@@ -12,7 +12,7 @@ to set the default configuration and to build the setup from sources.
 
 :: ---- BUILDER OPTION ----
 
-set retrobat_version=6.1.0
+set lumaca_version=6.1.0
 set retroarch_version=1.16.0
 
 set get_batgui=0
