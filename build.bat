@@ -12,7 +12,7 @@ to set the default configuration and to build the setup from sources.
 
 :: ---- BUILDER OPTION ----
 
-set retrobat_version=6.1.0
+set lumaca_version=6.1.0
 set retroarch_version=1.17.0
 
 set get_batgui=0
@@ -24,7 +24,7 @@ set get_emulationstation=1
 set get_emulators=0
 set get_lrcores=1
 set get_retroarch=1
-set get_retrobat_binaries=1
+set get_lumaca_binaries=1
 set get_system=1
 set get_wiimotegun=1
 
