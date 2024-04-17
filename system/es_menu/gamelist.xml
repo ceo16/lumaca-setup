@@ -964,7 +964,7 @@
 	<game>
 		<path>./yuzu.menu</path>
 		<name>Yuzu (Switch)</name>
-		<desc>Run Yuzu (Switch). This software is not provided by Lumaca. You can download it here: https://yuzu-emu.org/downloads/</desc>
+		<desc>Run Yuzu (Switch). This software is not provided by RetroBat. You can download it here: https://yuzu-emu.org/downloads/</desc>
 		<image>./media/yuzu-logo.png</image>
 		<marquee>./media/yuzu-logo.png</marquee>
 		<rating>0</rating>
