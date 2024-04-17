@@ -964,7 +964,7 @@
 	<game>
 		<path>./suyu.menu</path>
 		<name>Suyu (Switch)</name>
-		<desc>Run Suyu (Switch). This software is not provided by RetroBat.</desc>
+		<desc>Run Suyu (Switch). This software is not provided by Lumaca.</desc>
 		<image>./media/suyu-logo.png</image>
 		<marquee>./media/suyu-logo.png</marquee>
 		<rating>0</rating>
@@ -998,7 +998,7 @@
 	<game>
 		<path>./yuzu.menu</path>
 		<name>Yuzu (Switch)</name>
-		<desc>Run Yuzu (Switch). This software is not provided by RetroBat.</desc>
+		<desc>Run Yuzu (Switch). This software is not provided by Lumaca.</desc>
 		<image>./media/yuzu-logo.png</image>
 		<marquee>./media/yuzu-logo.png</marquee>
 		<rating>0</rating>
