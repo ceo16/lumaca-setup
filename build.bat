@@ -1,3 +1,6 @@
+@echo off
+setlocal EnableDelayedExpansion
+
 goto:rem
 ---------------------------------------
 build.bat
@@ -7,12 +10,9 @@ to set the default configuration and to build the setup from sources.
 ---------------------------------------
 :rem
 
-@echo off
-setlocal EnableDelayedExpansion
-
 :: ---- BUILDER OPTION ----
 
-set retrobat_version=6.1.0
+set lumaca_version=6.1.0
 set retroarch_version=1.17.0
 
 set get_batgui=0
@@ -21,20 +21,12 @@ set get_bios=1
 set get_decorations=1
 set get_default_theme=1
 set get_emulationstation=1
-set get_emulators=1
+set get_emulators=0
 set get_lrcores=1
 set get_retroarch=1
-set get_retrobat_binaries=1
+set get_lumaca_binaries=1
 set get_system=1
 set get_wiimotegun=1
-
-:: ---- INNO OPTIONS ----
-
-:: installer_compression_type: See Inno Setup documentation to "[Setup]: Compression"
-:: disk_spanning: Should not be modified here. Script calculate if build folder total size need disk spanning.
-
-set installer_compression_type=lzma2/normal
-set disk_spanning=no
 
 :: ---- ARCHIVE OPTIONS ----
 
@@ -50,9 +42,9 @@ set setup_compiler=ISCC
 
 set deps_list=(git !setup_compiler! 7za wget curl)
 set submodules_list=(bios decorations system)
-set packages_list=(retrobat_binaries batgui emulationstation default_theme batocera_ports mega_bezels retroarch roms wiimotegun)
+set packages_list=(lumaca_binaries batgui emulationstation default_theme batocera_ports mega_bezels retroarch roms wiimotegun)
 set legacy_cores_list=(4do emuscv fake08 hatarib imageviewer mame2014 mame2016)
-set emulators_black_list=(3dsen lemonade pico8 retroarch ryujinx steam sudachi suyu teknoparrot yuzu yuzu-early-access)
+set emulators_black_list=(3dsen pico8 retroarch ryujinx steam teknoparrot yuzu yuzu-early-access)
 
 :: ---- GET STARTED ----
 
@@ -502,8 +494,6 @@ goto :eof
 set task=build_setup
 (echo %date% %time% [LABEL] :!task!)>> "!root_path!\%log_file%"
 
-if %get_emulators% EQU 1 set disk_spanning=yes
-
 echo :: BUILDING RETROBAT SETUP...
 
 call :check_version
@@ -513,8 +503,8 @@ set package_file=%name%-v%release_version%-setup.exe
 if not exist "!build_path!\%package_file%" (
 
 	if "%setup_compiler%"=="makensis" ("!compiler_path!\makensis.exe" /V4 /DRELEASE_VERSION=%release_version%  "!root_path!\installer\setup.nsi")
-	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86_64" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x64 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
-	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x86 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
+	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86_64" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x64 /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
+	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x86 /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
 )
 
 timeout/t 2 >nul
