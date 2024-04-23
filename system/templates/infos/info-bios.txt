@@ -2,7 +2,7 @@
 	 BIOS Compatibility List (Source: Batocera)
 	********************************************
 
--- Some systems are not yet supported with RetroBat --
+-- Some systems are not yet supported with Lumaca --
 
 Find files here: https://emulation.gametechwiki.com/index.php/Emulator_Files
 Rename BIOS files if needed.
