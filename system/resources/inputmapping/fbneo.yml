@@ -2773,7 +2773,6 @@ dblewing:
   Button 2: a
   Button 3: b
   Service: leftstick
-  Service: leftstick
 baddudes:
   players: 2
   Coin: back
@@ -3644,4 +3643,3 @@ kuhga:
   Right: dpright
   Button 1: x
   Button 2: a
-# GALAXIAN

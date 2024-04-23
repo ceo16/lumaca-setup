@@ -61,7 +61,6 @@ OutputBaseFilename={#MyAppName}-v{#MyAppVersion}-setup
 OutputDir={#SourceDir}
 OutputManifestFile={#MyAppName}-v{#MyAppVersion}-setup_Manifest.txt
 PrivilegesRequired=lowest
-SetupIconFile=".\resources\launcher.ico"
 ShowLanguageDialog=auto
 SlicesPerDisk=3
 DiskSliceSize=1566000000
