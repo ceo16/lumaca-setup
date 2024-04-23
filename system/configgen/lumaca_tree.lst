@@ -137,9 +137,6 @@ emulators\hatari
 emulators\hypseus
 emulators\jynx
 emulators\kega-fusion
-emulators\lemonade
-emulators\lemonade\user
-emulators\lemonade\user\config
 emulators\m2emulator
 emulators\m2emulator\CFG
 emulators\m2emulator\NVDATA
@@ -194,16 +191,11 @@ emulators\simcoupe
 emulators\simple64
 emulators\snes9x
 emulators\solarus
-emulators\sonic3air
-emulators\sonic3air\savedata
 emulators\ssf
 emulators\steam
 emulators\stella
 emulators\supermodel
 emulators\supermodel\Config
-emulators\suyu
-emulators\suyu\user
-emulators\suyu\user\config
 emulators\vita3k
 emulators\vita3k\ux0
 emulators\vita3k\ux0\user
@@ -224,11 +216,6 @@ records
 records\config
 records\output
 roms
-roms\sonicmania
-roms\sonicretro
-roms\sonicretro\sonic1
-roms\sonicretro\sonic2
-roms\sonicretro\soniccd
 saves
 saves\amiga
 saves\amiga\winuae
@@ -246,7 +233,6 @@ saves\gemrb
 saves\hbmame
 saves\hbmame\artwork
 saves\hbmame\ctrlr
-saves\karaoke
 saves\mame
 saves\mame\artwork
 saves\mame\ctrlr
