@@ -52,7 +52,6 @@ OutputBaseFilename={#MyAppName}-v{#MyAppVersion}-setup
 OutputDir={#SourceDir}
 OutputManifestFile={#MyAppName}-v{#MyAppVersion}-setup_Manifest.txt
 PrivilegesRequired=lowest
-SetupIconFile=".\resources\launcher.ico"
 ShowLanguageDialog=auto
 SolidCompression=yes
 Uninstallable=no
