@@ -24,7 +24,7 @@ set get_emulationstation=1
 set get_emulators=0
 set get_lrcores=1
 set get_retroarch=1
-set get_retrobat_binaries=1
+set get_lumaca_binaries=1
 set get_system=1
 set get_wiimotegun=1
 
