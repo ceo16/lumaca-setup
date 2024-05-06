@@ -1,7 +1,7 @@
-#define MyAppName "RetroBat"
-#define MyAppPublisher "The RetroBat Team"
-#define MyAppURL "https://retrobat.org"
-#define MyAppExeName "retrobat.exe"
+#define MyAppName "Lumaca"
+#define MyAppPublisher "The Lumaca Team"
+#define MyAppURL "https://lumaca.org"
+#define MyAppExeName "lumaca.exe"
 #define public Dependency_NoExampleSetup
 
 #ifndef MyAppVersion
@@ -12,20 +12,12 @@
 #define MyAppArchitecture "x64"
 #endif
 
-#ifndef MyAppArchitecture
-#define MyAppArchitecture "x64"
-#endif
-
-#ifndef InstallerCompressionType
-#define InstallerCompressionType "lzma2/normal"
-#endif
-
-#ifndef EnableDiskSpanning
-#define EnableDiskSpanning "no"
+#ifndef SourceDir
+#define SourceDir ".\..\build"
 #endif
 
 #ifndef InstallRootUrl
-#define InstallRootUrl "http://www.retrobat.ovh/repo/win64"
+#define InstallRootUrl "http://www.lumaca.ovh/repo/win64"
 #endif
 
 #include "dependencies.iss"
@@ -33,7 +25,7 @@
 [Setup]
 ;PrivilegesRequiredOverridesAllowed=dialog
 AllowCancelDuringInstall=False
-AppId={{043F867E-BDFC-4305-AB2D-AFE933BE6AFA} 
+AppId={{6AA38B8C-435F-4EB7-ACF9-8593A9650963} 
 AppName={#MyAppName}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
@@ -43,12 +35,11 @@ AppVerName={#MyAppName} {#MyAppVersion}
 AppVersion={#MyAppVersion}
 ArchitecturesAllowed={#MyAppArchitecture}
 ArchitecturesInstallIn64BitMode=x64
-Compression={#InstallerCompressionType}
+Compression=lzma
 DefaultDirName=C:\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 DisableWelcomePage=no
-DiskSpanning={#EnableDiskSpanning}
 InfoBeforeFile=".\readme.txt"
 LicenseFile=.\..\license.txt
 MinVersion=0,6.1sp1
@@ -56,10 +47,7 @@ OutputBaseFilename={#MyAppName}-v{#MyAppVersion}-setup
 OutputDir={#SourceDir}
 OutputManifestFile={#MyAppName}-v{#MyAppVersion}-setup_Manifest.txt
 PrivilegesRequired=lowest
-SetupIconFile=".\resources\launcher.ico"
-ShowLanguageDialog=yes
-SlicesPerDisk=3
-DiskSliceSize=1566000000
+ShowLanguageDialog=auto
 SolidCompression=yes
 Uninstallable=no
 VersionInfoCopyright={#MyAppPublisher}
@@ -67,7 +55,6 @@ VersionInfoVersion=1.0.0.0
 WizardImageFile=".\resources\retrobat_wizard.bmp"
 WizardImageStretch=yes
 WizardSmallImageFile=".\resources\WizardSmall.bmp"
-WizardStyle=modern
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -101,7 +88,7 @@ Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 Name: "custom"; Description: "Custom installation"; Flags: iscustom
 
 [Components]
-Name: "main"; Description: "RetroBat"; Types: custom; Flags: fixed
+Name: "main"; Description: "Lumaca"; Types: custom; Flags: fixed
 Name: "directx"; Description: "DirectX9"; Types: custom
 Name: "vcredist"; Description: "Visual C++ 2010-2022 Redistributables (32 & 64 bit)"; Types: custom
 
@@ -122,9 +109,9 @@ Source: ".\redist\dxwebsetup.exe"; Components: directx; Flags: dontcopy noencryp
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Registry]
-Root: "HKCU"; Subkey: "Software\RetroBat"; ValueType: string; ValueName: "LatestKnownInstallPath"; ValueData: "{app}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2;
-Root: "HKCU64"; Subkey: "Software\RetroBat"; ValueType: string; ValueName: "InstallRootUrl"; ValueData: "{#InstallRootUrl}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2; Check: IsWin64
-Root: "HKCU32"; Subkey: "Software\RetroBat"; ValueType: string; ValueName: "InstallRootUrl"; ValueData: "{#InstallRootUrl}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2; Check: not IsWin64
+Root: "HKCU"; Subkey: "Software\Lumaca"; ValueType: string; ValueName: "LatestKnownInstallPath"; ValueData: "{app}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2;
+Root: "HKCU64"; Subkey: "Software\Lumaca"; ValueType: string; ValueName: "InstallRootUrl"; ValueData: "{#InstallRootUrl}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2; Check: IsWin64
+Root: "HKCU32"; Subkey: "Software\Lumaca"; ValueType: string; ValueName: "InstallRootUrl"; ValueData: "{#InstallRootUrl}"; Flags: createvalueifdoesntexist; MinVersion: 0,6.2; Check: not IsWin64
 
 [Code]
 

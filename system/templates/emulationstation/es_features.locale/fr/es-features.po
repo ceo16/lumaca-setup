@@ -7166,4 +7166,3 @@ msgstr "Certains leviers de vitesse sont rattachés directement au PC et ont un 
 
 msgctxt "game_options"
 msgid "FORCE GEARSTICK DEVICE ID"
-msgstr "FORCER L'ID DU LEVIER DE VITESSE"

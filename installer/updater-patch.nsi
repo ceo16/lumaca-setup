@@ -1,7 +1,7 @@
 /*
 ********************************
 
-  RetroBat Updater Patch NSIS Script
+  Lumaca Updater Patch NSIS Script
 
 ********************************
 */
@@ -9,11 +9,11 @@ SetCompressor /SOLID lzma
 RequestExecutionLevel user
 Unicode true
 
-!define PRODUCT "RetroBat Updater Patch"
-!define FILENAME "retrobat"
-!define PRODUCT_PUBLISHER "RetroBat Team"
+!define PRODUCT "Lumaca Updater Patch"
+!define FILENAME "lumaca"
+!define PRODUCT_PUBLISHER "Lumaca Team"
 !define PRODUCT_WEB_SITE "https://www.retrobat.org/"
-!define PRODUCT_DIR_REGKEY "Software\RetroBat"
+!define PRODUCT_DIR_REGKEY "Software\Lumaca"
 
 !define BASE_SOURCE ".\patch"
 !define BASE_TARGET "$(^Name)"
@@ -100,7 +100,7 @@ Unicode true
 ;end MUI
 
 Name "${PRODUCT}"
-OutFile "retrobat-v5-updater-patch.exe"
+OutFile "lumaca-v5-updater-patch.exe"
 InstallDir "C:\${BASE_TARGET}\"
 InstallDirRegKey HKCU "${PRODUCT_DIR_REGKEY}" "LatestKnownInstallPath"
 ShowInstDetails "hide"
