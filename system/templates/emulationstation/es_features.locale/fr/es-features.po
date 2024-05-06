@@ -7166,34 +7166,3 @@ msgstr "Certains leviers de vitesse sont rattachés directement au PC et ont un 
 
 msgctxt "game_options"
 msgid "FORCE GEARSTICK DEVICE ID"
-msgstr "FORCER L'ID DU LEVIER DE VITESSE"
-    <theme>retrobat</theme>
-  </system>
-  <system>
-    <name>screenshots</name>
-    <fullname>Screenshots</fullname>
-    <manufacturer>Misc. System</manufacturer>
-    <path>~\..\screenshots</path>
-    <extension>.jpg .jpeg .png .bmp .psd .tga .gif .hdr .pic .ppm .pgm</extension>
-    <command>"%HOME%\emulatorLauncher.exe" -gameinfo %GAMEINFOXML% %CONTROLLERSCONFIG% -system %SYSTEM% -emulator %EMULATOR% -core %CORE% -rom %ROM%</command>
-    <emulators>
-      <emulator name="libretro">
-        <cores>
-          <core>imageviewer</core>
-        </cores>
-      </emulator>
-    </emulators>
-    <platform>imageviewer</platform>
-    <theme>imageviewer</theme>
-  </system>
-  <system>
-    <fullname>MESS</fullname>
-    <hardware>MESS</hardware>
-    <manufacturer>MESS</manufacturer>
-    <release/>
-    <name>mess</name>
-    <platform>pc</platform>
-    <theme>mess</theme>
-    <group>mess</group>
-  </system>
-</systemList>
