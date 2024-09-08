@@ -1,59 +1,38 @@
-# NAOMI INPUT REMAPS FOR RETROARCH
-#
-# This file is provided with Lumaca
-# based on the works of Warped Polygon
-#
-# It is used to automatically generate input remaps for Retroarch for Naomi games with Flycast core
+# This file is provided with RetroBat
+# It can be used to automatically generate input remaps for Retroarch for a specific core/system combination
 # Each container must be named exactly the same as your game rom file (without the extension)
-#
 # The elements listed are the buttons for which you want the function to be remapped
 # The key represents the RetroArch button code
 # The value represents the original button ID for the specific system/game
 # you can use the -1 value to unmap a button
-#
 18wheelr:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: 8
-  btn_down: -1
   btn_x: 5
   btn_y: 0
 18wheelro:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: 8
-  btn_down: -1
   btn_x: 5
   btn_y: 0
 18wheelrt:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: 8
-  btn_down: -1
   btn_x: 5
   btn_y: 0
 18wheels:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: 8
-  btn_down: -1
   btn_x: 5
   btn_y: 0
 18wheelu:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: 8
-  btn_down: -1
   btn_x: 5
   btn_y: 0
 alienfnt:
-  analog_dpad_mode: 0
-  btn_a: -1
-  btn_b: -1
   btn_l2: 0
   btn_r2: 1
-  btn_x: -1
-  btn_y: -1
   stk_l_x+: 8
   stk_l_x-: 9
   stk_l_y+: 12
@@ -61,13 +40,8 @@ alienfnt:
   stk_r_x+: 16
   stk_r_x-: 17
 alienfnta:
-  analog_dpad_mode: 0
-  btn_a: -1
-  btn_b: -1
   btn_l2: 0
   btn_r2: 1
-  btn_x: -1
-  btn_y: -1
   stk_l_x+: 8
   stk_l_x-: 9
   stk_l_y+: 12
@@ -75,20 +49,14 @@ alienfnta:
   stk_r_x+: 16
   stk_r_x-: 17
 alpilot:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_x: 8
 alpilotj:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_x: 8
 asndynmto:
   analog_dpad_mode: 3
   btn_b: 1
-  btn_l: -1
-  btn_l2: -1
-  btn_r: -1
-  btn_r2: -1
   btn_x: 8
   btn_y: 0
   stk_l_x+: -1
@@ -102,10 +70,6 @@ asndynmto:
 asndynmt:
   analog_dpad_mode: 3
   btn_b: 1
-  btn_l: -1
-  btn_l2: -1
-  btn_r: -1
-  btn_r2: -1
   btn_x: 8
   btn_y: 0
   stk_l_x+: -1
@@ -143,11 +107,7 @@ bdrdown:
   analog_dpad_mode: 3
   btn_a: 1
   btn_b: 8
-  btn_l: -1
-  btn_l2: -1
   btn_r: 1
-  btn_r2: -1
-  btn_x: -1
   btn_y: 0
   stk_l_x+: -1
   stk_l_x-: -1
@@ -232,10 +192,7 @@ cleoftp:
   stk_r_x-: -1
   stk_r_y+: -1
   stk_r_y-: -1
-confmiss:
-  analog_dpad_mode: 0
 crzytaxi:
-  analog_dpad_mode: 0
   btn_b: 4
   btn_down: -1
   btn_up: -1
@@ -280,24 +237,24 @@ cspike:
   analog_dpad_mode: 3
   btn_a: -1
   btn_b: 8
-  btn_l: -1
   btn_r: 1
+  btn_l: -1
   btn_x: -1
   btn_y: 0
 cvs2:
   analog_dpad_mode: 3
   btn_a: 11
   btn_b: 9
-  btn_l: 1
   btn_r: 10
+  btn_l: 1
   btn_x: 8
   btn_y: 0
 cvs2mf:
   analog_dpad_mode: 3
   btn_a: 11
   btn_b: 9
-  btn_l: 1
   btn_r: 10
+  btn_l: 1
   btn_x: 8
   btn_y: 0
 cvsgd:
@@ -307,8 +264,6 @@ cvsgd:
   btn_r: -1
   btn_x: 8
   btn_y: 0
-deathcox:
-  analog_dpad_mode: 3
 doa2:
   analog_dpad_mode: 3
   btn_a: 0
@@ -328,12 +283,10 @@ doa2m:
   btn_x: 0
   btn_y: 8
 dybb99:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_y: 0
 dybbnao:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_y: 0
@@ -392,7 +345,6 @@ gundmxgd:
   btn_x: -1
   btn_y: 8
 gunsur2:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l2: -1
   btn_r2: 8
@@ -401,7 +353,6 @@ gunsur2:
   stk_r_x+: 16
   stk_r_x-: 17
 gunsur2j:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l2: -1
   btn_r2: 8
@@ -418,8 +369,6 @@ hmgeo:
   analog_dpad_mode: 3
   btn_b: 1
   btn_y: 0
-hotd2:
-  analog_dpad_mode: 0
 ikaruga:
   analog_dpad_mode: 3
   btn_a: -1
@@ -457,7 +406,6 @@ illvelo:
   stk_r_y+: -1
   stk_r_y-: -1
 jambo:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_y: 8
 jingystm:
@@ -506,17 +454,12 @@ kurucham:
   btn_r2: -1
   btn_x: 1
   btn_y: 0
-lupinsho:
-  analog_dpad_mode: 0
-luptype:
-  analog_dpad_mode: 0
 mamonoro:
   analog_dpad_mode: 3
   btn_a: -1
   btn_b: 8
   btn_y: 0
 marstv:
-  analog_dpad_mode: 0
   btn_a: 4
   btn_b: 6
   btn_down: -1
@@ -537,8 +480,6 @@ marstv:
   stk_r_x-: -1
   stk_r_y+: -1
   stk_r_y-: -1
-mazan:
-  analog_dpad_mode: 0
 mbaa:
   analog_dpad_mode: 3
   btn_a: 1
@@ -585,10 +526,6 @@ meltyblo:
   btn_l: 9
   btn_r: 10
   btn_y: 0
-mok:
-  analog_dpad_mode: 0
-monkeyba:
-  analog_dpad_mode: 0
 mvsc2:
   analog_dpad_mode: 3
   btn_a: 11
@@ -605,8 +542,6 @@ mvsc2u:
   btn_r: 10
   btn_x: 8
   btn_y: 0
-ninjaslt:
-  analog_dpad_mode: 0
 pjustic:
   analog_dpad_mode: 3
   btn_a: 11
@@ -639,7 +574,6 @@ pstone2b:
   btn_x: 1
   btn_y: 0
 psyvar2:
-  analog_dpad_mode: 3
   btn_a: -1
   btn_b: 8
   btn_l: -1
@@ -788,15 +722,12 @@ rhytngk:
   stk_r_y+: -1
   stk_r_y-: -1
 ringout:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l2: 8
 ringouto:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l2: 8
 samba:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: -1
   btn_l: 8
@@ -812,7 +743,6 @@ samba:
   stk_r_y+: 18
   stk_r_y-: 19
 sambaa:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: -1
   btn_l: 8
@@ -828,7 +758,6 @@ sambaa:
   stk_r_y+: 18
   stk_r_y-: 19
 sambap:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: -1
   btn_l: 8
@@ -844,7 +773,6 @@ sambap:
   stk_r_y+: 18
   stk_r_y-: 19
 samba2k:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: -1
   btn_l: 8
@@ -894,7 +822,6 @@ sgtetris:
   stk_r_y+: -1
   stk_r_y-: -1
 shaktam:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 5
   btn_down: 6
@@ -912,7 +839,6 @@ shaktam:
   stk_r_y+: -1
   stk_r_y-: -1
 shaktamb:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 5
   btn_down: 6
@@ -930,7 +856,6 @@ shaktamb:
   stk_r_y+: -1
   stk_r_y-: -1
 shaktmsp:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 5
   btn_down: 6
@@ -996,12 +921,10 @@ slashout:
   btn_x: 8
   btn_y: 0
 smarinef:
-  analog_dpad_mode: 0
   btn_b: 3
   btn_up: -1
   btn_y: 4
 smlg99:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_x: -1
@@ -1038,7 +961,6 @@ sprtjam:
   btn_x: -1
   btn_y: 0
 sstrkfgt:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_l: 20
@@ -1048,7 +970,6 @@ sstrkfgt:
   stk_r_x+: -1
   stk_r_x-: -1
 sstrkfgta:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_l: 20
@@ -1112,7 +1033,6 @@ tetkiwam:
   stk_r_y+: -1
   stk_r_y-: -1
 tokyobus:
-  analog_dpad_mode: 0
   btn_b: 1
   btn_down: 7
   btn_l: 11
@@ -1122,8 +1042,6 @@ tokyobus:
   btn_up: 6
   btn_x: 5
   btn_y: 0
-totd:
-  analog_dpad_mode: 0
 toukon4:
   analog_dpad_mode: 3
   btn_b: 9
@@ -1262,7 +1180,6 @@ virnbapa:
   stk_r_y+: -1
   stk_r_y-: -1
 vonot:
-  analog_dpad_mode: 0
   btn_a: 9
   btn_b: -1
   btn_l: -1
@@ -1360,7 +1277,6 @@ vtennis2c:
   stk_r_y+: -1
   stk_r_y-: -1
 wldkicks:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l: -1
   btn_l2: -1
@@ -1373,7 +1289,6 @@ wldkicks:
   stk_r_y+: -1
   stk_r_y-: -1
 wldkicksj:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l: -1
   btn_l2: -1
@@ -1386,7 +1301,6 @@ wldkicksj:
   stk_r_y+: -1
   stk_r_y-: -1
 wldkickspj:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l: -1
   btn_l2: -1
@@ -1399,7 +1313,6 @@ wldkickspj:
   stk_r_y+: -1
   stk_r_y-: -1
 wldkickspw:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l: -1
   btn_l2: -1
@@ -1412,7 +1325,6 @@ wldkickspw:
   stk_r_y+: -1
   stk_r_y-: -1
 wldkicksu:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_l: -1
   btn_l2: -1
@@ -1425,7 +1337,6 @@ wldkicksu:
   stk_r_y+: -1
   stk_r_y-: -1
 wrungp:
-  analog_dpad_mode: 0
   btn_up: -1
   btn_x: 4
   stk_l_y+: 22
@@ -1433,7 +1344,6 @@ wrungp:
   stk_r_y+: -1
   stk_r_y-: -1
 wrungpo:
-  analog_dpad_mode: 0
   btn_up: -1
   btn_x: 4
   stk_l_y+: 22
@@ -1441,7 +1351,6 @@ wrungpo:
   stk_r_y+: -1
   stk_r_y-: -1
 wsbbgd:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_b: 8
   btn_y: 0
@@ -1468,17 +1377,14 @@ zerogu2:
   btn_b: 8
   btn_y: 0
 zombrvn:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_x: 1
   btn_y: 8
 zombrvne:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_x: 1
   btn_y: 8
 zombrvno:
-  analog_dpad_mode: 0
   btn_a: -1
   btn_x: 1
   btn_y: 8
