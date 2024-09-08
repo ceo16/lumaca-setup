@@ -61,6 +61,7 @@ bios\raine\emudx
 bios\same_cdi
 bios\same_cdi\bios
 cheats
+cheats\capriceforever
 cheats\duckstation
 cheats\hbmame
 cheats\mame
@@ -158,6 +159,15 @@ emulators\mupen64
 emulators\mupen64\Config
 emulators\nosgba
 emulators\openbor
+emulators\opengoal
+emulators\opengoal\config
+emulators\opengoal\config\OpenGOAL
+emulators\opengoal\config\OpenGOAL\jak1
+emulators\opengoal\config\OpenGOAL\jak1\misc
+emulators\opengoal\config\OpenGOAL\jak1\settings
+emulators\opengoal\config\OpenGOAL\jak2
+emulators\opengoal\config\OpenGOAL\jak2\misc
+emulators\opengoal\config\OpenGOAL\jak2\settings
 emulators\oricutron
 emulators\pcsx2
 emulators\pcsx2-16
@@ -205,6 +215,7 @@ emulators\sudachi\user
 emulators\sudachi\user\config
 emulators\supermodel
 emulators\supermodel\Config
+emulators\supermodel\NVRAM
 emulators\suyu
 emulators\suyu\user
 emulators\suyu\user\config
@@ -243,6 +254,7 @@ saves\3ds\lime3ds\nand
 saves\3ds\lime3ds\sdmc
 saves\amiga
 saves\amiga\winuae
+saves\amstradcpc\capriceforever
 saves\apple2\mednafen
 saves\apple2\mednafen\sstates
 saves\gamecube
@@ -327,6 +339,7 @@ saves\switch\nand
 saves\switch\sdmc
 screenshots
 screenshots\ares
+screenshots\capriceforever
 screenshots\citra
 screenshots\duckstation
 screenshots\lime3ds
