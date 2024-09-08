@@ -15,7 +15,7 @@
    viewBox="0 0 7312.9163 2399.9527"
    preserveAspectRatio="xMidYMid meet"
    id="svg21"
-   sodipodi:docname="retrobat.svg"
+   sodipodi:docname="lumaca.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
      id="metadata27">
@@ -381,7 +381,7 @@
        style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:10"
        d="m 3015.918,128.59375 c -32.0879,0.898 -135.668,32.48162 -210.918,66.28906 -243,110.11565 -458.9961,321.6555 -585.9961,576.66016 l -40.9961,81.13281 45.9961,51.19141 c 84,92.72897 108,210.56791 65,320.68361 -103,264.6639 -442.0117,280.1235 -572.0117,27.0508 -28,-56.0239 -31.9922,-73.4168 -31.9922,-137.168 1,-88.8653 27,-154.54092 85,-208.63282 22,-20.28447 40,-42.49633 40,-49.25781 0,-6.76149 -16.0039,-43.47231 -34.0039,-82.10938 -119,-250.17503 -373,-493.58484 -615,-592.10937 -87,-35.73929 -177.98829,-59.88475 -187.98829,-51.19141 -3,3.86371 10,28.00201 29.99999,54.08203 139,182.56015 163.9922,435.64123 61.9922,616.26954 -20,33.80744 -35,65.67818 -35,70.50781 0,3.86371 15.9961,10.62848 35.9961,14.49219 100,18.3526 186.0078,89.82246 223.0078,185.44922 27,67.6149 35.9883,198.0219 22.9883,300.4102 -5,39.6029 -5.9922,72.4537 -1.9922,75.3515 3,1.9319 30.0078,-4.8435 58.0078,-15.4687 66,-24.1482 152.9883,-24.1482 207.9883,0 31.6999,13.4428 93.7381,60.8619 120.7812,88.8672 h -278.1835 v 0.02 a 466.79687,458.98437 0 0 0 -1.9532,-0.02 466.79687,458.98437 0 0 0 -0.547,0 466.79687,458.98437 0 0 0 -466.25005,458.9843 466.79687,458.98437 0 0 0 466.79685,458.9844 466.79687,458.98437 0 0 0 400.1563,-222.6563 h 357.8906 a 466.79687,458.98437 0 0 0 400.1563,222.6563 466.79687,458.98437 0 0 0 466.7968,-458.9844 466.79687,458.98437 0 0 0 -458.0078,-458.8867 v -0.1 H 2304.043 l 26.9531,-25.1172 c 94,-85.9675 205.0078,-104.3103 308.0078,-54.0821 23,11.5911 43.9961,19.3147 45.9961,17.3828 3,-1.9318 0,-47.3338 -5,-101.4257 -19,-188.3556 13.0039,-314.8939 99.0039,-392.16801 42,-38.63707 136.9961,-83.0664 175.9961,-83.0664 20,0 19,-4.82132 -20,-66.64063 -53,-83.0697 -69.0078,-158.41023 -63.0078,-290.74218 7,-145.85495 40.0078,-238.59006 123.0078,-342.91016 20,-25.11409 33,-48.30426 30,-52.16797 -1.375,-1.20741 -4.498,-1.69079 -9.082,-1.5625 z" />
     <g
-       aria-label="RETROBAT"
+       aria-label="LUMACA"
        transform="matrix(1.0781694,0,0.0311088,0.927498,389.9399,80.040041)"
        id="text848-3-8"
        style="font-style:normal;font-weight:normal;font-size:1832.5px;line-height:1.25;font-family:sans-serif;mix-blend-mode:normal;fill:#000000;fill-opacity:0.439216;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4892-2-8)">
@@ -419,7 +419,7 @@
          id="path4412-8-8" />
     </g>
     <g
-       aria-label="RETROBAT"
+       aria-label="LUMACA"
        transform="matrix(1.0781694,0,0.0311088,0.927498,372.57871,54.876511)"
        id="text848-3"
        style="font-style:normal;font-weight:normal;font-size:1832.5px;line-height:1.25;font-family:sans-serif;fill:#3ca9fd;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4892-2)">
@@ -471,7 +471,7 @@
        cy="1981.8864"
        r="397.5" />
     <g
-       aria-label="RETROBAT"
+       aria-label="LUMACA"
        transform="matrix(1.0781694,0,0.03110881,0.92749804,360,24.999999)"
        id="text848"
        style="font-style:normal;font-weight:normal;font-size:1832.5px;line-height:1.25;font-family:sans-serif;fill:none;fill-opacity:0.25098;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4892)">
@@ -755,7 +755,7 @@
        style="opacity:1;fill:#303030;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 1417.5,1702.5 a 275,275 0 0 0 -275,275 275,275 0 0 0 275,275 275,275 0 0 0 275,-275 275,275 0 0 0 -275,-275 z m -1.6016,15.4688 a 260.85788,260.85788 0 0 1 1.7578,0 260.85788,260.85788 0 0 1 260.8399,260.8398 260.85788,260.85788 0 0 1 -260.8399,260.8594 260.85788,260.85788 0 0 1 -260.8593,-260.8594 260.85788,260.85788 0 0 1 259.1015,-260.8398 z" />
     <g
-       aria-label="RETROBAT"
+       aria-label="LUMACA"
        transform="matrix(0.79722317,0,0,0.50863839,817.79661,717.34773)"
        id="text1396"
        style="font-style:normal;font-weight:normal;font-size:227.926px;line-height:1.25;font-family:sans-serif;opacity:0.69213;fill:url(#linearGradient5889);fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
