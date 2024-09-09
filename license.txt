@@ -2,6 +2,7 @@
 
 Lumaca is a Windows softwares distribution dedicated to retrogaming and emulation.
 
+
 Copyright (c) 2017-2019 ceo16 "Ceo"
 Copyright (c) 2020-2023 Lumaca Team
 
@@ -16,4 +17,6 @@ Shipping Lumaca with additional proprietary and copyrighted content is illegal, 
 Otherwise, you can start a new project off Lumaca sources if you follow the same conditions.
 
 Finally, the license which concerns the entire Lumaca Project as a work, in particular the written or graphic content broadcast on its various media, is conditioned by the terms of the CC BY-NC-SA 4.0 license.
+
 See https://creativecommons.org/licenses/by-nc-sa/4.0.
+

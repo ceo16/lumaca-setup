@@ -12,7 +12,7 @@ Unicode true
 !define PRODUCT "Lumaca Updater Patch"
 !define FILENAME "lumaca"
 !define PRODUCT_PUBLISHER "Lumaca Team"
-!define PRODUCT_WEB_SITE "https://www.retrobat.org/"
+!define PRODUCT_WEB_SITE "https://www.lumaca.org/"
 !define PRODUCT_DIR_REGKEY "Software\Lumaca"
 
 !define BASE_SOURCE ".\patch"
@@ -25,11 +25,11 @@ Unicode true
 
 !define MUI_COMPONENTSPAGE_SMALLDESC
 !define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP "${RESOURCES_PATH}\retrobat_header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "${RESOURCES_PATH}\lumaca_header.bmp"
 !define MUI_HEADERIMAGE_BITMAP_STRETCH "FitControl"
 !define MUI_HEADER_TRANSPARENT_TEXT
-!define MUI_ICON "${RESOURCES_PATH}\retrobat-icon-white.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "${RESOURCES_PATH}\retrobat_wizard.bmp"
+!define MUI_ICON "${RESOURCES_PATH}\lumaca-icon-white.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "${RESOURCES_PATH}\lumaca_wizard.bmp"
 !define MUI_FINISHPAGE_LINK "Visit official ${PRODUCT} website: ${PRODUCT_WEB_SITE}"
 !define MUI_FINISHPAGE_LINK_LOCATION "${PRODUCT_WEB_SITE}"
 

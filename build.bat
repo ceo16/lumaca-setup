@@ -2,7 +2,7 @@ goto:rem
 ---------------------------------------
 build.bat
 ---------------------------------------
-This batch script is made to help download all the required software for RetroBat,
+This batch script is made to help download all the required software for Lumaca,
 to set the default configuration and to build the setup from sources.
 ---------------------------------------
 :rem
@@ -12,8 +12,8 @@ setlocal EnableDelayedExpansion
 
 :: ---- BUILDER OPTION ----
 
-set lumaca_version=6.1.0
-set retroarch_version=1.17.0
+set lumaca_version=6.3.1
+set retroarch_version=1.19.1
 
 set get_batgui=0
 set get_batocera_ports=1
@@ -22,7 +22,7 @@ set get_decorations=1
 set get_default_theme=1
 set get_emulationstation=1
 set get_emulators=0
-set get_lrcores=1
+set get_lrcores=0
 set get_retroarch=1
 set get_lumaca_binaries=1
 set get_system=1
@@ -124,7 +124,7 @@ if %user_choice% NEQ 0 (
 call :banner
 
 echo  This script can help you to download all the required 
-echo  softwares and build the RetroBat Setup with the NullSoft 
+echo  softwares and build the Lumaca Setup with the NullSoft 
 echo  Scriptable Install System.
 echo +===========================================================+
 echo  (1) - full compilation
@@ -436,7 +436,7 @@ if "%get_emulators%"=="1" (
 
 goto :eof
 
-:: ---- SET RETROBAT CONFIG ----
+:: ---- SET LUMACA CONFIG ----
 
 :set_config
 
@@ -495,7 +495,7 @@ echo build version is: !release_version!
 
 goto :eof
 
-:: ---- BUILD RETROBAT SETUP ----
+:: ---- BUILD LUMACA SETUP ----
 
 :build_setup
 
@@ -504,7 +504,7 @@ set task=build_setup
 
 if %get_emulators% EQU 1 set disk_spanning=yes
 
-echo :: BUILDING RETROBAT SETUP...
+echo :: BUILDING LUMACA SETUP...
 
 call :check_version
 
@@ -615,7 +615,7 @@ echo *************************************************************
 
 for %%j in %legacy_cores_list% do (
 
-	if "!package_name!"=="%%j" (set download_url=https://www.retrobat.ovh/repo/%arch%/legacy/lrcores)
+	if "!package_name!"=="%%j" (set download_url=https://www.lumaca.ovh/repo/%arch%/legacy/lrcores)
 )
 
 if exist "%download_path%\%package_file%" goto :eof

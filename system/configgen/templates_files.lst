@@ -1,13 +1,16 @@
 \system\resources\emulationstation\notice.pdf|\emulationstation\.emulationstation\notice.pdf
 \system\resources\emulationstation\progress.png|\emulationstation\resources\progress.png
 \system\resources\emulationstation\splash.xml|\emulationstation\resources\splash.xml
-\system\resources\lumaca_logo.svg|\emulationstation\resources\splash_lumaca.svg
+\system\resources\lumaca_logo.png|\emulationstation\resources\splash_lumaca.png
+\system\resources\lumaca_logo_old.svg|\emulationstation\resources\splash_lumaca.svg
 \system\templates\ares\settings.bml|\emulators\ares\settings.bml
 \system\templates\bigpemu\userdata\BigPEmuConfig.bigpcfg|\emulators\bigpemu\userdata\BigPEmuConfig.bigpcfg
 \system\templates\bizhawk\config.ini|\emulators\bizhawk\config.ini
 \system\templates\capriceforever\Caprice.ini|\emulators\capriceforever\Caprice.ini
 \system\templates\capriceforever\Device.ini|\emulators\capriceforever\Device.ini
 \system\templates\cemu\settings.xml|\emulators\cemu\settings.xml
+\system\templates\cemu\portable\GraphicPacks.zip|\emulators\cemu\portable\graphicPacks
+\system\templates\cemu\portable\settings.xml|\emulators\cemu\portable\settings.xml
 \system\templates\citra-canary\portable.txt|\emulators\citra-canary\portable.txt
 \system\templates\citra-canary\qt-config.ini|\emulators\citra-canary\user\config\qt-config.ini
 \system\templates\citra\portable.txt|\emulators\citra\portable.txt
@@ -19,6 +22,7 @@
 \system\templates\demul\Demul.ini|\emulators\demul\Demul.ini
 \system\templates\demul\gpuDX11.ini|\emulators\demul\gpuDX11.ini
 \system\templates\dolphin-triforce\Dolphin.ini|\emulators\dolphin-triforce\User\Config\Dolphin.ini
+\system\templates\dolphin-triforce\GameSettings\GameSettings.zip|\emulators\dolphin-triforce\Sys\GameSettings
 \system\templates\dolphin-triforce\GCPadNew.ini|\emulators\dolphin-triforce\User\Config\GCPadNew.ini
 \system\templates\dolphin-triforce\GFX.ini|\emulators\dolphin-triforce\User\Config\GFX.ini
 \system\templates\dolphin\Dolphin.ini|\emulators\dolphin-emu\User\Config\Dolphin.ini
@@ -34,6 +38,7 @@
 \system\templates\emulationstation\es_settings.cfg|\emulationstation\.emulationstation\es_settings.cfg
 \system\templates\fbneo\config\fbneo64.ini|\emulators\fbneo\config\fbneo64.ini
 \system\templates\flycast\emu.cfg|\emulators\flycast\emu.cfg
+\system\templates\flycast\nvmem.zip|\emulators\flycast\data
 \system\templates\gemrb\GemRB.cfg|\emulators\gemrb\GemRB.cfg
 \system\templates\gzdoom\gzdoom_portable.ini|\emulators\gzdoom\gzdoom_portable.ini
 \system\templates\hatari\hatari.cfg|\emulators\hatari\hatari.cfg
@@ -87,8 +92,9 @@
 \system\templates\pcsx2\portable.ini|\emulators\pcsx2\portable.ini
 \system\templates\phoenix\phoenix.config.xml|\emulators\phoenix\phoenix.config.xml
 \system\templates\play\config.xml|\emulators\play\Play Data Files\config.xml
-\system\templates\play\inputprofiles\Retrobat.xml|\emulators\play\Play Data Files\inputprofiles\Retrobat.xml
-\system\templates\ppsspp\ppsspp.ini|\emulators\ppsspp\memstick\PSP\SYSTEM\ppsspp.ini
+\system\templates\play\inputprofiles\Lumaca.xml|\emulators\play\Play Data Files\inputprofiles\Lumaca.xml
+\system\templates\ppsspp\installed.txt|\emulators\ppsspp\installed.txt
+\system\templates\ppsspp\ppsspp.ini|\saves\psp\SYSTEM\ppsspp.ini
 \system\templates\project64\Project64.cfg|\emulators\project64\Config\Project64.cfg
 \system\templates\psxmame\mame.ini|\emulators\psxmame\mame.ini
 \system\templates\raine\raine32_sdl.cfg|\emulators\raine\config\raine32_sdl.cfg
@@ -97,6 +103,9 @@
 \system\templates\retroarch\custom-shaders-presets.zip|\emulators\retroarch\shaders
 \system\templates\retroarch\retroarch-core-options.cfg|\emulators\retroarch\retroarch-core-options.cfg
 \system\templates\retroarch\retroarch.cfg|\emulators\retroarch\retroarch.cfg
+\system\templates\retroarch\saves\reicast\nvmem_atomiswave.zip|\saves\atomiswave\reicast
+\system\templates\retroarch\saves\reicast\nvmem_naomi.zip|\saves\naomi\reicast
+\system\templates\retroarch\saves\reicast\nvmem.naomi2.zip|\saves\naomi2\reicast
 \system\templates\roms\ports\craft.libretro|\roms\ports\2048.libretro
 \system\templates\roms\ports\craft.libretro|\roms\ports\craft.libretro
 \system\templates\roms\ports\craft.libretro|\roms\ports\gong.libretro
@@ -109,7 +118,10 @@
 \system\templates\roms\wiiu\example-to-edit.m3u.txt|\roms\wiiu\example-to-edit.m3u.txt
 \system\templates\rpcs3\GuiConfigs\CurrentSettings.ini|\emulators\rpcs3\GuiConfigs\CurrentSettings.ini
 \system\templates\rpcs3\config.yml|\emulators\rpcs3\config.yml
+\system\templates\rpcs3\vfs.yml|\emulators\rpcs3\config\vfs.yml
+\system\templates\ryujinx\Configure Ryujinx.bat|\emulators\ryujinx\Configure Ryujinx.bat
 \system\templates\ryujinx\portable\Config.json|\emulators\ryujinx\portable\Config.json
+\system\templates\ryujinx\portable\Config.json|\saves\switch\ryujinx\portable\Config.json
 \system\templates\scummvm\scummvm.ini|\emulators\scummvm\scummvm.ini
 \system\templates\simple64\input-profiles.ini|\emulators\simple64\input-profiles.ini
 \system\templates\simple64\input-settings.ini|\emulators\simple64\input-settings.ini
@@ -130,7 +142,7 @@
 \system\templates\supermodel\Supermodel.ini|\emulators\supermodel\Config\Supermodel.ini
 \system\templates\suyu\qt-config.ini|\emulators\suyu\user\config\qt-config.ini
 \system\templates\vita3k\config.yml|\emulators\vita3k\config.yml
-\system\templates\vita3k\user.xml|\emulators\vita3k\ux0\user\00\user.xml
+\system\templates\vita3k\user.xml|\saves\psvita\vita3k\ux0\user\00\user.xml
 \system\templates\winuae\winuae.ini|\emulators\winuae\winuae.ini
 \system\templates\xemu\xemu.toml|\emulators\xemu\xemu.toml
 \system\templates\xenia-canary\gamecontrollerdb.txt|\emulators\xenia-canary\gamecontrollerdb.txt

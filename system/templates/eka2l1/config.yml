@@ -32,7 +32,7 @@ svg-icon-cache-reset: true
 imei: 540806859904945
 mmc-id: 00000000-00000000-00000000-00000000
 audio-master-volume: 100
-current-keybind-profile: retrobat
+current-keybind-profile: lumaca
 screen-buffer-sync: preferred
 report-mmfdev-underflow: false
 disable-display-content-scale: false

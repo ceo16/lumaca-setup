@@ -1,11 +1,11 @@
 
 -- LUMACA --
 
-Official Website: https://www.retrobat.org
-FAQ & Forum: https://social.retrobat.org/forum
-Wiki: https://wiki.retrobat.org/
-Discord: https://social.retrobat.org/discord
-Facebook Group: https://www.facebook.com/groups/retrobat
+Official Website: https://www.lumaca.org
+FAQ & Forum: https://social.lumaca.org/forum
+Wiki: https://wiki.lumaca.org/
+Discord: https://social.lumaca.org/discord
+Facebook Group: https://www.facebook.com/groups/lumaca
 
 - Introduction
 
