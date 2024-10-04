@@ -449,10 +449,10 @@ set current_dir=%current_dir:"=%
 set current_path=!current_drive!\!current_dir!
 set root_path=!current_path!
 
-set "reg_path=HKCU\Software\RetroBat"
+set "reg_path=HKCU\Software\Lumaca"
 set "reg_key=LatestKnownInstallPath"
 
-reg query "HKCU\Software\RetroBat" /v "%reg_key%" >nul 2>&1
+reg query "HKCU\Software\Lumaca" /v "%reg_key%" >nul 2>&1
 
 if %ERRORLEVEL% EQU 0 (
 
@@ -583,7 +583,7 @@ title %name% updater script
 
 :: Kill the process listed in kill_process.list if they are running
 
-if exist "!root_path!\retrobat.exe" "!root_path!\retrobat.exe" #killProcess
+if exist "!root_path!\lumaca.exe" "!root_path!\lumaca.exe" #killProcess
 
 goto :eof
 
@@ -711,7 +711,7 @@ if %progress_percent% EQU 100 (
 	if exist "%emulationstation_path%\.emulationstation\es_features.cfg" copy/Y "%emulationstation_path%\.emulationstation\es_features.cfg" "%system_path%\templates\emulationstation\es_features.cfg.default" >nul
 	if exist "%emulationstation_path%\*.1" del/Q "%emulationstation_path%\*.1"
 	
-	curl -X POST http://127.0.0.1:1234/messagebox -H "Content-Type: text/plain" -d "Please close EmulationStation now and restart RetroBat to finish the update process. Open main menu and select 'QUIT' or press ALT+F4, then run retrobat.exe."
+	curl -X POST http://127.0.0.1:1234/messagebox -H "Content-Type: text/plain" -d "Please close EmulationStation now and restart Lumaca to finish the update process. Open main menu and select 'QUIT' or press ALT+F4, then run retrobat.exe."
 	
 	(set/A exit_code=0)
 	(set exit_msg=update done!)
