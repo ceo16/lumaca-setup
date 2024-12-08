@@ -770,6 +770,10 @@ msgid "USE PREEMPTIVE FRAMES"
 msgstr "EXÉCUTER DES IMAGES PRÉEMPTIVES"
 
 msgctxt "game_options"
+msgid "Use preemptive frames instead of run-ahead, the run-ahead frame number applies."
+msgstr "Utiliser les images préemptives, le nombre d'image sélectionné pour le saut d'image est appliqué."
+
+msgctxt "game_options"
 msgid "AUTOMATIC FRAME DELAY"
 msgstr "RETARD D'IMAGE AUTOMATIQUE"
 
@@ -2541,6 +2545,14 @@ msgid "FACE BUTTON LAYOUT"
 msgstr "DISPOSITION DES BOUTONS"
 
 msgctxt "game_options"
+msgid "GAMECUBE FACE BUTTON LAYOUT"
+msgstr "DISPOSITION DES BOUTONS (MANETTE GAMECUBE)"
+
+msgctxt "game_options"
+msgid "This option only affects Gamecube controller."
+msgstr "Cette option n'affecte que la disposition des boutons pour la manette gamecube."
+
+msgctxt "game_options"
 msgid "NINTENDO LAYOUT"
 msgstr "DISPOSITION NINTENDO"
 
@@ -3849,7 +3861,7 @@ msgid "HLE BIOS"
 msgstr "BIOS HLE"
 
 msgctxt "game_options"
-msgid "Force use of hight-level BIOS emulation."
+msgid "Force use of high-level BIOS emulation."
 msgstr "Force l'émulation haut-niveau du BIOS."
 
 msgctxt "game_options"
@@ -9815,3 +9827,7 @@ msgstr "Passer au débogueur hôte (ou planter en cas d'absence de débogueur) s
 msgctxt "game_options"
 msgid "BREAK ON UNIMPLEMENTED INSTRUCTIONS"
 msgstr "ARRÊT SI INSTRUCTION NON IMPLÉMENTÉE"
+
+msgctxt "game_options"
+msgid "EMULATION SPEED"
+msgstr "VITESSE D'ÉMULATION"
