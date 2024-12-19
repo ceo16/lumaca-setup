@@ -1897,8 +1897,8 @@ msgid "Cheats must be placed in the \cheats\pcsx2\cheats folder."
 msgstr "Placer les codes de triches dans le dossier 'cheats\pcsx2\cheats'"
 
 msgctxt "game_options"
-msgid "Lumaca will use by default psxonpsp BIOS, enable this option to force usage of legacy SCPH550X bios file."
-msgstr "Lumaca utilise par défaut le bios psxonpsp, cette option permet de forcer l'utilisation du bios SCPH550X."
+msgid "RetroBat will use by default psxonpsp BIOS, enable this option to force usage of legacy SCPH550X bios file."
+msgstr "RetroBat utilise par défaut le bios psxonpsp, cette option permet de forcer l'utilisation du bios SCPH550X."
 
 msgctxt "game_options"
 msgid "FORCE BIOS"
@@ -8889,8 +8889,8 @@ msgid "FORCE NUMBER OF PLAYERS"
 msgstr "FORCER LE NOMBRE DE JOUEURS"
 
 msgctxt "game_options"
-msgid "By default Lumaca configures as many players as connected controllers, use this to override."
-msgstr "Lumaca configure automatiquement autant de joueurs qu'il y a de manettes connectées, cette option permet de forcer un nombre défini de joueurs."
+msgid "By default RetroBat configures as many players as connected controllers, use this to override."
+msgstr "RetroBat configure automatiquement autant de joueurs qu'il y a de manettes connectées, cette option permet de forcer un nombre défini de joueurs."
 
 msgctxt "game_options"
 msgid "MULTIPLAYER MODE"
