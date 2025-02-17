@@ -56,10 +56,10 @@ set current_dir=%current_dir:"=%
 set current_path=!current_drive!\!current_dir!
 set root_path=!current_path!
 
-set "reg_path=HKCU\Software\RetroBat"
+set "reg_path=HKCU\Software\Lumaca"
 set "reg_key=LatestKnownInstallPath"
 
-reg query "HKCU\Software\RetroBat" /v "%reg_key%" >nul 2>&1
+reg query "HKCU\Software\Lumaca" /v "%reg_key%" >nul 2>&1
 
 if %ERRORLEVEL% EQU 0 (
 

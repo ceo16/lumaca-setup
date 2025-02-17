@@ -4,7 +4,7 @@
 ; with integration of the changes made to allow optional installation based on selected components, 
 ; from the work done on  https://github.com/Avalanche-Studios/InnoDependencyInstaller/tree/components.
 ;
-; Dependancies not needed for the RetroBat's project has been removed here for easier reading. 
+; Dependancies not needed for the Lumaca's project has been removed here for easier reading. 
 ; 
 ; -- LICENCE --
 ;
