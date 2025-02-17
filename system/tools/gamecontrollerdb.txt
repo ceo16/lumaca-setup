@@ -1,10 +1,10 @@
-# Game Controller DB for SDL in 2.0.16 format modified for RetroBat
+# Game Controller DB for SDL in 2.0.16 format modified for Lumaca
 # Source: https://github.com/gabomdq/SDL_GameControllerDB
-# Modified for RetroBat :
+# Modified for Lumaca :
 # - removed non windows platforms
 # - Added wheels and some guns
 # - Ensure all controllers have start and select mapped
-# RetroBat wheels
+# Lumaca wheels
 030000006e3400000400000000000000,Moza R5 SRP LITE,buttonright:b5,buttonleft:b7,buttonup:b4,buttondown:b6,a:b0,b:b1,back:b37,dpdown:b6,dpleft:b7,dpright:b5,dpup:b4,leftshoulder:b12,leftstick:b20,lefttrigger:b18,leftx:a0,rightshoulder:b13,rightstick:b33,righttrigger:b31,start:b35,x:b2,y:b3,throttle:+a2,brake:+a5,n:b18,wp:b19,fl:b20,cam:b21,radio:b22,s1:b23,home:b24,p:b31,box:b32,pl:b33,r:b34,s2:b36,menu:b37,platform:WindowsWheel,
 030000006d0400004fc2000000000000,Logitech G HUB G29 Driving Force Racing Wheel USB,buttonright:DPadRight,buttonleft:DPadLeft,buttonup:DPadUp,buttondown:DPadDown,a:b0,b:b2,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b5,leftstick:b11,lefttrigger:b7,leftx:a0,rightshoulder:b4,rightstick:b10,righttrigger:b6,start:b9,x:b1,y:b3,throttle:a1,brake:a2,clutch:a3,volplus:b19,volminus:b20,return:b23,guide:b24,igniteleft:b22,igniteright:b21,platform:WindowsWheel,
 030000006d04000060c2000000000000,Logitech G29 Driving Force Racing Wheel,a:b0,b:b2,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b5,leftstick:b11,lefttrigger:b7,leftx:a0,rightshoulder:b4,rightstick:b10,righttrigger:b6,start:b9,x:b1,y:b3,throttle:a1,brake:a2,volplus:b19,volminus:b20,return:b23,guide:b24,platform:WindowsWheel,

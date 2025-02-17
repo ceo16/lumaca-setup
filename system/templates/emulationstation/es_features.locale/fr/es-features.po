@@ -1218,8 +1218,8 @@ msgid "AUTOCONFIGURE EMULATOR"
 msgstr "AUTOCONFIGURATION DE L'ÉMULATEUR"
 
 msgctxt "game_options"
-msgid "Force emulator in fullscreen even if RetroBat is windowed"
-msgstr "Forcer l'émulateur en plein écran même si RetroBat est fenêtré."
+msgid "Force emulator in fullscreen even if Lumaca is windowed"
+msgstr "Forcer l'émulateur en plein écran même si Lumaca est fenêtré."
 
 msgctxt "game_options"
 msgid "Place custom 'crosshair.png' file in 'cross' subfolder of the emulator."
@@ -2026,8 +2026,8 @@ msgid "Cheats must be placed in the \cheats\pcsx2\cheats folder."
 msgstr "Placer les codes de triches dans le dossier 'cheats\pcsx2\cheats'"
 
 msgctxt "game_options"
-msgid "RetroBat will use by default psxonpsp BIOS, enable this option to force usage of legacy SCPH550X bios file."
-msgstr "RetroBat utilise par défaut le bios psxonpsp, cette option permet de forcer l'utilisation du bios SCPH550X."
+msgid "Lumaca will use by default psxonpsp BIOS, enable this option to force usage of legacy SCPH550X bios file."
+msgstr "Lumaca utilise par défaut le bios psxonpsp, cette option permet de forcer l'utilisation du bios SCPH550X."
 
 msgctxt "game_options"
 msgid "GAME ENHANCEMENTS"

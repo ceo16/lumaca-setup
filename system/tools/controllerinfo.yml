@@ -20,7 +20,7 @@
 # Indent is 2 spaces
 #
 # Example for the first entry:
-# The root container is the guid from RetroBat, as found in es_input.cfg file or in emulatorlauncher.log (eg 03000000c82d00000631000000007200)
+# The root container is the guid from Lumaca, as found in es_input.cfg file or in emulatorlauncher.log (eg 03000000c82d00000631000000007200)
 # then create a container for the emulator you need replacement for (eg. sudachi)
 # the target guid must be set after the 'guid' key (eg: guid: 03000000c82d00000631000014017801)
 # to get the target GUID, configure your controller directly within the emulator, and open the configuration file of the emulator to look for the controller guid
