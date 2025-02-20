@@ -12,7 +12,7 @@ setlocal EnableDelayedExpansion
 
 :: ---- BUILDER OPTION ----
 
-set lumaca_version=7.0.0
+set Retrobat_version=7.0.0
 set retroarch_version=1.19.1
 
 set get_batgui=0
