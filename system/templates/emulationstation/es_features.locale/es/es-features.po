@@ -13024,8 +13024,8 @@ msgstr ""
 "utilizar para guardar asignaciones propias."
 
 msgctxt "game_options"
-msgid "Lumaca AUTO"
-msgstr "Lumaca AUTO"
+msgid "LUMACA AUTO"
+msgstr "LUMACA AUTO"
 
 msgctxt "game_options"
 msgid "GAME SPECIFIC"

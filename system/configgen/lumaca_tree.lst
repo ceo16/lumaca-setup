@@ -101,9 +101,6 @@ emulators\cgenius
 emulators\citra
 emulators\citra\user
 emulators\citra\user\config
-emulators\citra-canary
-emulators\citra-canary\user
-emulators\citra-canary\user\config
 emulators\citron
 emulators\citron\user
 emulators\citron\user\config
@@ -112,6 +109,9 @@ emulators\cxbx-reloaded\EmuDisk
 emulators\daphne
 emulators\demul
 emulators\demul-old
+emulators\dhewm3
+emulators\dhewm3\base
+emulators\dhewm3\d3xp
 emulators\dolphin-emu
 emulators\dolphin-emu\User
 emulators\dolphin-emu\User\Config
@@ -139,10 +139,13 @@ emulators\hypseus
 emulators\jgenesis
 emulators\jynx
 emulators\kega-fusion
+emulators\kronos
 emulators\lime3ds
 emulators\lime3ds\user
 emulators\lime3ds\user\config
 emulators\m2emulator
+emulators\m2emulator\artwork
+emulators\m2emulator\artwork\crosshairs
 emulators\m2emulator\CFG
 emulators\m2emulator\NVDATA
 emulators\m2emulator\scripts
@@ -152,6 +155,9 @@ emulators\m2emulator\templatescfg\xinput
 emulators\mame
 emulators\mame\cfg
 emulators\mame\ini
+emulators\mandarine
+emulators\mandarine\user
+emulators\mandarine\user\config
 emulators\mednafen
 emulators\mesen
 emulators\mgba
@@ -175,6 +181,8 @@ emulators\pcsx2-16
 emulators\pcsx2-16\Plugins
 emulators\pcsx2-16\inis
 emulators\pcsx2\inis
+emulators\pdark
+emulators\pdark\data
 emulators\phoenix
 emulators\play
 emulators\play\Play Data Files
@@ -199,6 +207,8 @@ emulators\rpcs3\config
 emulators\rpcs3\GuiConfigs
 emulators\ryujinx
 emulators\scummvm
+emulators\shadps4
+emulators\shadps4\user
 emulators\simcoupe
 emulators\simple64
 emulators\snes9x
@@ -226,9 +236,6 @@ emulators\xenia-canary
 emulators\xenia-canary\config
 emulators\xenia-canary\patches
 emulators\yuzu
-emulators\yuzu-early-access
-emulators\yuzu-early-access\user
-emulators\yuzu-early-access\user\config
 emulators\yuzu\user
 emulators\yuzu\user\config
 emulators\zinc
@@ -252,6 +259,9 @@ saves\3ds\Citra\sdmc
 saves\3ds\lime3ds
 saves\3ds\lime3ds\nand
 saves\3ds\lime3ds\sdmc
+saves\3ds\mandarine
+saves\3ds\mandarine\nand
+saves\3ds\mandarine\sdmc
 saves\amiga
 saves\amiga\winuae
 saves\amstradcpc\capriceforever
@@ -259,6 +269,7 @@ saves\apple2\mednafen
 saves\apple2\mednafen\sstates
 saves\atomiswave
 saves\atomiswave\reicast
+saves\corsixth
 saves\dolphin
 saves\dolphin\Load
 saves\dolphin\Load\ResourcePacks
@@ -267,6 +278,8 @@ saves\dolphin\User\GC\EUR
 saves\dolphin\User\GC\JAP
 saves\dolphin\User\GC\USA
 saves\dolphin\User\Wii
+saves\doom3
+saves\doom3\dhewm3
 saves\gba
 saves\gba\mgba
 saves\gemrb
@@ -365,8 +378,10 @@ screenshots\ares
 screenshots\capriceforever
 screenshots\citra
 screenshots\citron
+screenshots\corsixth
 screenshots\duckstation
 screenshots\lime3ds
+screenshots\mandarine
 screenshots\mednafen
 screenshots\Mupen64
 screenshots\pcsx2

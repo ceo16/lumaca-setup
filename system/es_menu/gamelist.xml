@@ -156,7 +156,7 @@
 	<game>
 		<path>./citron.menu</path>
 		<name>Citron (Switch)</name>
-		<desc>Run Citron (Switch). This software is not provided by RetroBat.</desc>
+		<desc>Run Citron (Switch). This software is not provided by Lumaca.</desc>
 		<image>./media/citron-logo.png</image>
 		<marquee>./media/citron-logo.png</marquee>
 		<rating>0</rating>

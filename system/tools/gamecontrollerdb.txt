@@ -17,7 +17,7 @@
 # Guns in gamepad mode
 03000000412300004280000000000000,GUN4IR Pro Micro P1,a:b1,b:b2,x:b0,y:b3,back:b4,start:b5,dpdown:b8,dpleft:b9,dpright:b7,dpup:b6,pedal:b3,trigger:b0,leftx:a0,lefty:a1,platform:WindowsGun,
 03000000412300004380000000000000,GUN4IR Pro Micro P2,a:b1,b:b2,x:b0,y:b3,back:b4,start:b5,dpdown:b8,dpleft:b9,dpright:b7,dpup:b6,pedal:b3,trigger:b0,leftx:a0,lefty:a1,platform:WindowsGun,
-# RetroBat modified
+# Lumaca modified
 03000000c82d00000631000000000000,8BitDo Ultimate FC40,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b4,leftstick:b8,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b9,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Windows,
 03000000a30c00002800000000000000,Astro City Mini,a:b2,b:b1,back:b8,dpdown:+a1,dpup:-a1,dpleft:-a0,dpright:+a0,leftx:a3,lefty:a4,leftshoulder:b4,rightshoulder:b5,start:b9,x:b3,y:b0,platform:Windows,
 03000000120c00003101000000000000,Controller (ZERO-Pi Fighting Board),a:b0,b:b1,x:b2,y:b3,back:b6,guide:b10,start:b7,leftstick:b8,rightstick:b9,leftshoulder:b4,rightshoulder:b5,dpup:h0.1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:a4,righttrigger:a5,platform:Windows,

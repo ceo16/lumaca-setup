@@ -28,7 +28,7 @@
 # the target name (dolphin, mupen64 or simple64) must be set after the 'name' key
 #
 #
-######### RETROBAT DEFAULT ################
+######### LUMACA DEFAULT ################
 03000000c82d00000631000000007200:
   name: 8BitDo Pro 2 USB
   sudachi:

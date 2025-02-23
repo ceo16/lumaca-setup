@@ -1,10 +1,10 @@
-# This file is provided with RetroBat
+# This file is provided with Lumaca
 # It can be used to overwrite keyboard hotkeys per core or for all cores
 # Each container must be named by the core name to perform the overwrite only for specified core(s).
 # If no core container exists, the "default" container will be used.
 # The key represents the Retroarch config option
 # The value represents the keyboard key
-# Here are the default RetroBat values:
+# Here are the default Lumaca values:
 #default:
 #  input_menu_toggle: f1
 #  input_save_state: f2

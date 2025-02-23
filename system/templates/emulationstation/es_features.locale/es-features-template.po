@@ -10445,7 +10445,7 @@ msgid "Use 'per game' if you have saved a profile for the game in capriceforever
 msgstr ""
 
 msgctxt "game_options"
-msgid "Lumaca AUTO"
+msgid "LUMACA AUTO"
 msgstr ""
 
 msgctxt "game_options"

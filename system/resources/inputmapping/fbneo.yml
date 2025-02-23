@@ -1,7 +1,7 @@
-# This file is provided with RetroBat
+# This file is provided with Lumaca
 # It can be used to automatically generate specific game input mappings in fbneo emulator (standalone)
 # Each container must be named exactly the same as your game rom file (without the extension)
-# The elements listed are the buttons that will be mapped in the emulator, per game .ini mapping can be found in the \emulators\fbneo\config\games folder of your RetroBat installation
+# The elements listed are the buttons that will be mapped in the emulator, per game .ini mapping can be found in the \emulators\fbneo\config\games folder of your Lumaca installation
 #
 # --------------- KEY ---------------------------
 # The key represents the fbneo arcade button name
@@ -18,10 +18,10 @@
 # Service
 #
 # the "players" key is used to specify the number of players for the game
-# the "noplayer" key, if set to 1, will tell RetroBat not to write the player index in front of the line in the config file for all buttons
+# the "noplayer" key, if set to 1, will tell Lumaca not to write the player index in front of the line in the config file for all buttons
 #
 # -------------- VALUE ----------------------------------
-# The value represents the dinput button name (refer to retrobat\system\tools\gamecontrollerdb file, the list is the following
+# The value represents the dinput button name (refer to lumaca\system\tools\gamecontrollerdb file, the list is the following
 # lefty_up (left stick up)
 # lefty_down (left stick down)
 # lefty_axis (left stick axis)
