@@ -1,8 +1,8 @@
 \system\resources\emulationstation\notice.pdf|\emulationstation\.emulationstation\notice.pdf
 \system\resources\emulationstation\progress.png|\emulationstation\resources\progress.png
 \system\resources\emulationstation\splash.xml|\emulationstation\resources\splash.xml
-\system\resources\retrobat_logo.png|\emulationstation\resources\splash_retrobat.png
-\system\resources\retrobat_logo_old.svg|\emulationstation\resources\splash_retrobat.svg
+\system\resources\lumaca_logo.png|\emulationstation\resources\splash_lumaca.png
+\system\resources\lumaca_logo_old.svg|\emulationstation\resources\splash_lumaca.svg
 \system\templates\altirra\Altirra.ini|\emulators\altirra\Altirra.ini
 \system\templates\altirra\Configure altirra.bat|\emulators\altirra\Configure altirra.bat
 \system\templates\ares\settings.bml|\emulators\ares\settings.bml
@@ -106,7 +106,7 @@
 \system\templates\pdark\pd.ini|\emulators\pdark\pd.ini
 \system\templates\phoenix\phoenix.config.xml|\emulators\phoenix\phoenix.config.xml
 \system\templates\play\config.xml|\emulators\play\Play Data Files\config.xml
-\system\templates\play\inputprofiles\Retrobat.xml|\emulators\play\Play Data Files\inputprofiles\Retrobat.xml
+\system\templates\play\inputprofiles\Lumaca.xml|\emulators\play\Play Data Files\inputprofiles\Lumaca.xml
 \system\templates\ppsspp\installed.txt|\emulators\ppsspp\installed.txt
 \system\templates\ppsspp\ppsspp.ini|\saves\psp\SYSTEM\ppsspp.ini
 \system\templates\project64\Project64.cfg|\emulators\project64\Config\Project64.cfg
