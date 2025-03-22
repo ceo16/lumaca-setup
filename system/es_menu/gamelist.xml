@@ -52,6 +52,23 @@
 		<region>wr</region>
 	</game>
 	<game>
+		<path>./azahar.menu</path>
+		<name>Azahar (3DS)</name>
+		<desc>Run Azahar Emulator (Nintendo 3DS).</desc>
+		<image>./media/azahar-logo.png</image>
+		<marquee>./media/azahar-logo.png</marquee>
+		<rating>0</rating>
+		<releasedate />
+		<developer>Azahar Team</developer>
+		<publisher>Azahar Team</publisher>
+		<genre>Emulator</genre>
+		<playcount />
+		<lastplayed />
+		<gametime />
+		<lang>en</lang>
+		<region>wr</region>
+	</game>
+	<game>
 		<path>./bigpemu.menu</path>
 		<name>BigPEmu (Jaguar)</name>
 		<desc>Run BigPEmu Emulator (Jaguar).</desc>
@@ -1327,6 +1344,23 @@
 		<releasedate />
 		<developer>Vita3K Team</developer>
 		<publisher>Vita3K Team</publisher>
+		<genre>Emulator</genre>
+		<playcount />
+		<lastplayed />
+		<gametime />
+		<lang>en</lang>
+		<region>wr</region>
+	</game>
+	<game>
+		<path>./xroar.menu</path>
+		<name>XRoar (Dragon 32/64)</name>
+		<desc>Run XRoar Emulator (Dragon 32/64).</desc>
+		<image>./media/xroar-logo.png</image>
+		<marquee>./media/xroar-logo.png</marquee>
+		<rating>0</rating>
+		<releasedate />
+		<developer>Ciaran Anscomb</developer>
+		<publisher>xroar@6809.org.uk</publisher>
 		<genre>Emulator</genre>
 		<playcount />
 		<lastplayed />
