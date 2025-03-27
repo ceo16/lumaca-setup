@@ -1,4 +1,4 @@
-[Input]
+oBat[Input]
 useSpecialPad = false
 cursorState = 1
 cursorHideTimeout = 5
@@ -14,7 +14,7 @@ Fullscreen = false
 isTrophyPopupDisabled = false
 enableDiscordRPC = false
 logType = "async"
-userName = "Lumaca"
+userName = "RetroBat"
 updateChannel = "Release"
 showSplash = false
 autoUpdate = false
