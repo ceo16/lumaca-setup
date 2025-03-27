@@ -55,7 +55,7 @@ set/A progress_percent=0
 set folder_list=(bios cheats decorations emulators library records roms saves screenshots sounds system)
 set file_list=(exe dat txt)
 set modules_list=(7za wget)
-set license_trusted_md5=91bd67de13479a57781336500d27541c
+set license_trusted_md5=7c76b73c95b0fdc8230d5692f60a7567
 
 if "%extract_pkg%"=="es" (
 	call :set_root
