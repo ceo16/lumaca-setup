@@ -1,7 +1,7 @@
 /*
 ********************************
 
-  RetroBat Setup NSIS Script
+  Lumaca Setup NSIS Script
 
 ********************************
 */
@@ -9,15 +9,15 @@ SetCompressor lzma
 RequestExecutionLevel user
 Unicode true
 
-!define PRODUCT "RetroBat"
-!define FILENAME "retrobat"
+!define PRODUCT "Lumaca"
+!define FILENAME "lumaca"
 ;!define BRANCH "stable"
 ;!define PRODUCT_VERSION "5.0.0"
 !define VERSION "${RELEASE_VERSION}"
 ;!define /date TIMESTAMP "%Y%m%d%H%M"
 ;!define /date TIMESTAMP2 "%Y/%m/%d %H:%M:%S"
-!define PRODUCT_PUBLISHER "RetroBat Team"
-!define PRODUCT_WEB_SITE "https://www.retrobat.org/"
+!define PRODUCT_PUBLISHER "Lumaca Team"
+!define PRODUCT_WEB_SITE "https://www.lumaca.org/"
 
 !define BASE_SOURCE ".\..\build"
 !define BASE_TARGET "$(^Name)"
@@ -28,8 +28,8 @@ Unicode true
 VIAddVersionKey "ProductName" "${PRODUCT}"
 VIAddVersionKey "CompanyName" "${PRODUCT}"
 VIAddVersionKey "FileVersion" "${SETUP_VERSION}"
-VIAddVersionKey "LegalCopyright" "RetroBat Team"
-VIAddVersionKey "FileDescription" "This program extracts and copies all major components of RetroBat to the chosen destination."
+VIAddVersionKey "LegalCopyright" "Lumaca Team"
+VIAddVersionKey "FileDescription" "This program extracts and copies all major components of Lumaca to the chosen destination."
 
 VIProductVersion "${SETUP_VERSION}"
 VIFileVersion "${SETUP_VERSION}"
@@ -49,11 +49,11 @@ SpaceTexts none
 !define MUI_ABORTWARNING_TEXT "Are you sure you wish to abort installation?"
 !define MUI_COMPONENTSPAGE_SMALLDESC
 !define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP "${RESOURCES_PATH}\retrobat_header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "${RESOURCES_PATH}\lumaca_header.bmp"
 !define MUI_HEADERIMAGE_BITMAP_STRETCH "FitControl"
 !define MUI_HEADER_TRANSPARENT_TEXT
-!define MUI_ICON "${RESOURCES_PATH}\retrobat-icon-white.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "${RESOURCES_PATH}\retrobat_wizard_old.bmp"
+!define MUI_ICON "${RESOURCES_PATH}\lumaca-icon-white.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "${RESOURCES_PATH}\lumaca_wizard_old.bmp"
 !define MUI_FINISHPAGE_SHOWREADME
 !define MUI_FINISHPAGE_SHOWREADME_TEXT "Create Desktop Shortcut"
 !define MUI_FINISHPAGE_SHOWREADME_FUNCTION CreateDesktopShortCut
@@ -153,7 +153,7 @@ FunctionEnd
 !macroend
 
 Function CreateDesktopShortCut
- CreateShortCut "$DESKTOP\RetroBat.lnk" "$INSTDIR\retrobat.exe"
+ CreateShortCut "$DESKTOP\Lumaca.lnk" "$INSTDIR\lumaca.exe"
 FunctionEnd
 
 Function .onInit

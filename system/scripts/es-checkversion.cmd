@@ -4,9 +4,9 @@ goto:rem
 ---------------------------------------
 es-checkversion.cmd
 ---------------------------------------
-This Batch script is originally created for RetroBat and to be used by the Windows build of Batocera-EmulationStation.
+This Batch script is originally created for Lumaca and to be used by the Windows build of Batocera-EmulationStation.
 It exists in conjunction with other scripts to form an integrated update system within the EmulationStation interface.
-Its main task is to check the local version of RetroBat and compare it to the latest remote version available.
+Its main task is to check the local version of Lumaca and compare it to the latest remote version available.
 If a new version is detected, it will download the lastest es-update.cmd script and ES will use it to perform the update routine.
 This script is supposed to be copied in the EmulationStation folder by the build.bat script in order to run properly.
 ---------------------------------------
@@ -56,10 +56,10 @@ set current_dir=%current_dir:"=%
 set current_path=!current_drive!\!current_dir!
 set root_path=!current_path!
 
-set "reg_path=HKCU\Software\RetroBat"
+set "reg_path=HKCU\Software\Lumaca"
 set "reg_key=LatestKnownInstallPath"
 
-reg query "HKCU\Software\RetroBat" /v "%reg_key%" >nul 2>&1
+reg query "HKCU\Software\Lumaca" /v "%reg_key%" >nul 2>&1
 
 if %ERRORLEVEL% EQU 0 (
 

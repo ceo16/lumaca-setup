@@ -1,11 +1,11 @@
-# This file is provided with RetroBat
+# This file is provided with Lumaca
 # It can be used to automatically generate Mapping automatically for your wheel in PCSX2
-# Each container must be named with the wheel type internal to RetroBat (see our wiki for the list)
+# Each container must be named with the wheel type internal to Lumaca (see our wiki for the list)
 # The elements listed are the buttons that will be mapped in the emulator
 # The key represents the controller button
 # The value represents the PCSX code for the button
 # Wheeltype values = 0:DRIVING FORCE, 1:DRIVING FORCE PRO, 2:DRIVING FORCE PRO REV11.02, 3:GT FORCE
-# You can configure your wheel once in pcsx2 directly, note the values and share them with the RetroBat team
+# You can configure your wheel once in pcsx2 directly, note the values and share them with the Lumaca team
 #
 LogitechG29:
   wheeltype: 2

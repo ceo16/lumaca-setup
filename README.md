@@ -1,6 +1,6 @@
 <h1 align="left">
   <br>
-  <a href="https://www.retrobat.org/"><img src="https://raw.githubusercontent.com/kaylh/RetroBat/master/system/resources/retrobat_logo.svg" alt="retrobat" width="500"></a>
+  <a href="https://www.lumaca.org/"><img src="https://raw.githubusercontent.com/kaylh/Lumaca/master/system/resources/lumaca_logo.svg" alt="lumaca" width="500"></a>
 </h1>
 <p align="left">
   <a href="https://discord.gg/k8mg99cY6F">
@@ -9,13 +9,13 @@
     </a>
 </p>
 
-RetroBat is designed to automatically configure EmulationStation’s frontend interface with RetroArch and other stand alone emulators.
+Lumaca is designed to automatically configure EmulationStation’s frontend interface with RetroArch and other stand alone emulators.
 
 With it you will be able to quickly run games from many compatible ROM collections. This saves hours of configuration and installation time, leaving you free to play your favourite retro games.
 
-RetroBat automatically downloads and installs all the relevant software needed to have the best retro gaming experience on your Windows PC.
+Lumaca automatically downloads and installs all the relevant software needed to have the best retro gaming experience on your Windows PC.
 
-RetroBat can also run in Portable Mode. This means you can play games from an external hard drive or from any removable storage device, as long as the computer meets the minimum requirements.
+Lumaca can also run in Portable Mode. This means you can play games from an external hard drive or from any removable storage device, as long as the computer meets the minimum requirements.
 
 ## 💻 System Requirements
 
@@ -30,7 +30,7 @@ RetroBat can also run in Portable Mode. This means you can play games from an ex
 |**Controllers:**|Xinput controllers hightly recommanded. Test your controller [HERE](https://gamepad-tester.com)|
 
 
-## 🦇 RetroBat Team
+## 🦇 Lumaca Team
 
 - Adrien Chalard "Kayl" - co-founder, developer
 - Lorenzolamas - co-founder, community, graphics
@@ -47,20 +47,20 @@ RetroBat can also run in Portable Mode. This means you can play games from an ex
 
 ## ⚖ Licence
 
-RetroBat (c) Adrien Chalard and the RetroBat Team.
+Lumaca (c) Adrien Chalard and the Lumaca Team.
 
-RetroBat is a free and open source project. It should not be used for commercial purposes.
+Lumaca is a free and open source project. It should not be used for commercial purposes.
 It is done by a team of enthusiasts in their free time mainly for fun.
 
-All the code written by the RetroBat Team, unless covered by a licence from an upstream project, is given under the [LGPL v3 licence](https://www.gnu.org/licenses/lgpl-3.0.html).
+All the code written by the Lumaca Team, unless covered by a licence from an upstream project, is given under the [LGPL v3 licence](https://www.gnu.org/licenses/lgpl-3.0.html).
 
-It is not allowed to sell RetroBat on a pre-installed machine or on any storage devices. RetroBat includes softwares which cannot be associated with any commercial activities.
+It is not allowed to sell Lumaca on a pre-installed machine or on any storage devices. Lumaca includes softwares which cannot be associated with any commercial activities.
 
-Shipping RetroBat with additional proprietary and copyrighted content is illegal, strictly forbidden and strongly discouraged by the RetroBat Team.
+Shipping Lumaca with additional proprietary and copyrighted content is illegal, strictly forbidden and strongly discouraged by the Lumaca Team.
 
-Otherwise, you can start a new project off RetroBat sources if you follow the same conditions.
+Otherwise, you can start a new project off Lumaca sources if you follow the same conditions.
 
-Finally, the license which concerns the entire RetroBat project as a work, in particular the written or graphic content broadcast on its various media, is conditioned by the terms of the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Finally, the license which concerns the entire Lumaca project as a work, in particular the written or graphic content broadcast on its various media, is conditioned by the terms of the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 |<img src="https://www.gnu.org/graphics/gplv3-127x51.png" width="140" alt="gpl3licence" class="center">|<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/180px-Cc-by-nc-sa_icon.svg.png" width="140" alt="cclicence" class="center">|
 |---|---|
@@ -74,9 +74,9 @@ Finally, the license which concerns the entire RetroBat project as a work, in pa
 
 ## 💬 Social & Support
 
-- Official Website: https://www.retrobat.org/
-- Facebook Group: https://social.retrobat.org/facebook
-- Wiki: https://wiki.retrobat.org/
-- You need help ? You found a bug ? Please visit RetroBat Forum: https://social.retrobat.org/forum
-- Join us on our Discord server: https://social.retrobat.org/discord
-- <a class="twitter-timeline" href="https://twitter.com/RetroBat_Off?ref_src=twsrc%5Etfw">Tweets by RetroBat_Off</a>
+- Official Website: https://www.lumaca.org/
+- Facebook Group: https://social.lumaca.org/facebook
+- Wiki: https://wiki.lumaca.org/
+- You need help ? You found a bug ? Please visit Lumaca Forum: https://social.lumaca.org/forum
+- Join us on our Discord server: https://social.lumaca.org/discord
+- <a class="twitter-timeline" href="https://twitter.com/Lumaca_Off?ref_src=twsrc%5Etfw">Tweets by Lumaca_Off</a>
