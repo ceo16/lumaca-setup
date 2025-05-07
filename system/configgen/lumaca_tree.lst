@@ -239,6 +239,7 @@ emulators\simple64
 emulators\snes9x
 emulators\soh
 emulators\solarus
+emulators\solarus2
 emulators\sonic3air
 emulators\sonic3air\savedata
 emulators\ssf
@@ -403,6 +404,7 @@ saves\wiiu\cemu
 saves\wiiu\cemu\mlc01
 saves\xbox360
 saves\xbox360\xenia
+saves\xbox360\xenia\content
 screenshots
 screenshots\ares
 screenshots\azahar
@@ -438,6 +440,10 @@ system\scripts
 system\shaders
 system\templates
 tattoos
+tattoos\default
+tattoos\games
+user
+user\inputmapping
 tattoos\default
 tattoos\games
 user
