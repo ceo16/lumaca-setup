@@ -2,7 +2,7 @@ goto:rem
 ---------------------------------------
 build.bat
 ---------------------------------------
-This batch script is made to help download all the required software for Lumaca,
+This batch script is made to help download all the required software for RetroBat,
 to set the default configuration and to build the setup from sources.
 ---------------------------------------
 :rem
@@ -59,7 +59,7 @@ set emulators_black_list=(3dsen citron lemonade opengoal pico8 retroarch ryujinx
 set script_type=builder
 set user_choice=0
 set git_branch=master
-set branch=stable
+set branch=beta
 set release_version=null
 set log_file=build.log
 set exit_timeout=0
@@ -124,7 +124,7 @@ if %user_choice% NEQ 0 (
 call :banner
 
 echo  This script can help you to download all the required 
-echo  softwares and build the Lumaca Setup with the NullSoft 
+echo  softwares and build the RetroBat Setup with the NullSoft 
 echo  Scriptable Install System.
 echo +===========================================================+
 echo  (1) - full compilation
@@ -436,7 +436,7 @@ if "%get_emulators%"=="1" (
 
 goto :eof
 
-:: ---- SET LUMACA CONFIG ----
+:: ---- SET RETROBAT CONFIG ----
 
 :set_config
 
@@ -495,7 +495,7 @@ echo build version is: !release_version!
 
 goto :eof
 
-:: ---- BUILD LUMACA SETUP ----
+:: ---- BUILD RETROBAT SETUP ----
 
 :build_setup
 
@@ -504,7 +504,7 @@ set task=build_setup
 
 if %get_emulators% EQU 1 set disk_spanning=yes
 
-echo :: BUILDING LUMACA SETUP...
+echo :: BUILDING RETROBAT SETUP...
 
 call :check_version
 
@@ -580,15 +580,15 @@ if exist "!build_path!\system\version.info" (
 
 	if exist "!build_path!\%name%-v%release_version%-setup.exe" (
 
-		"!buildtools_path\butler.exe" push "!build_path!\%name%-v%release_version%-setup.exe" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
-		rem "!buildtools_path\butler.exe" butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256.txt" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+		"!buildtools_path\butler.exe" push "!build_path!\%name%-v%release_version%-setup.exe" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+		rem "!buildtools_path\butler.exe" butler push --ignore "!build_path!\%name%-v%release_version%-setup.exe" --ignore "!build_path!\%name%-v%release_version%-setup.exe.sha256.txt" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
 		(set/A exit_code=%ERRORLEVEL%)
 	)
 	
 	if exist "!build_path!\%name%-v%release_version%-full-setup.exe" (
 
-		"!buildtools_path\butler.exe" push "!build_path!\%name%-v%release_version%-full-setup.exe" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
-		rem "!buildtools_path\butler.exe" push --ignore "!build_path!\%name%-v%release_version%-full-setup.exe" --ignore "!build_path!\%name%-v%release_version%-full-setup.exe.sha256.txt" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" lumacaofficial/lumaca:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+		"!buildtools_path\butler.exe" push "!build_path!\%name%-v%release_version%-full-setup.exe" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
+		rem "!buildtools_path\butler.exe" push --ignore "!build_path!\%name%-v%release_version%-full-setup.exe" --ignore "!build_path!\%name%-v%release_version%-full-setup.exe.sha256.txt" --ignore "%name%-v%release_version%.%archive_format%" --ignore "%name%-v%release_version%.%archive_format%.sha256" --ignore "!build_path!\*.log" --ignore "!build_path!\hash_list.txt" --ignore "!build_path!\emulationstation\.emulationstation\es_settings.cfg" "!build_path!\" retrobatofficial/retrobat:%arch%-%branch% --userversion-file "!build_path!\system\version.info"
 		(set/A exit_code=%ERRORLEVEL%)
 	)
 )
@@ -615,7 +615,7 @@ echo *************************************************************
 
 for %%j in %legacy_cores_list% do (
 
-	if "!package_name!"=="%%j" (set download_url=https://www.lumaca.ovh/repo/%arch%/legacy/lrcores)
+	if "!package_name!"=="%%j" (set download_url=https://www.retrobat.ovh/repo/%arch%/legacy/lrcores)
 )
 
 if exist "%download_path%\%package_file%" goto :eof
