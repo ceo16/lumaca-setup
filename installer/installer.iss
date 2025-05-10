@@ -1,6 +1,6 @@
 #define MyAppName "Lumaca"
 #define MyAppPublisher "The Lumaca Team"
-#define MyAppURL "https://Lumaca.org"
+#define MyAppURL "https://lumaca.org"
 #define MyAppExeName "lumaca.exe"
 #define public Dependency_NoExampleSetup
 
