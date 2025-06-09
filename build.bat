@@ -544,8 +544,7 @@ if exist "!root_path!\installer\%package_file%" (
 (echo %date% %time% [INFO] Created "%package_file%" in "!build_path!")>> "!root_path!\%log_file%"
 )
 
-rem [DEBUG] Chiamo :hash_file da create_archive. exit_code attuale e': !exit_code!
-rem call :hash_file
+call :hash_file
 
 goto :eof
 
@@ -580,8 +579,7 @@ if exist "!build_path!\%package_file%" (
 	(echo %date% %time% [INFO] Created "%package_file%" in "!build_path!")>> "!root_path!\%log_file%"
 )
 
-echo [DEBUG] Chiamo :hash_file da create_archive. exit_code attuale e': !exit_code!
-rem call :hash_file
+call :hash_file
 
 goto :eof
 
@@ -730,13 +728,7 @@ if "!task!" == "get_packages" (
 
 if exist "!hash_path!\!package_file!" (
 
-	(set "first_line=1")
-	for /f "skip=1 delims=" %%i in ('certutil -hashfile "!hash_path!\!package_file!" SHA256') do (
-		if [!first_line!]==[1] (
-			(set file_hash=%%i)
-			(set "first_line=0")
-		)
-	)
+	for /f %%i in ('powershell -NoProfile -Command "(Get-FileHash -Path ''!hash_path!\!package_file!'' -Algorithm SHA256).Hash.ToLower()"') do (set "file_hash=%%i")
 
 	if "!task!" == "get_packages" (
 REM		(echo !package_name!_sha256=!file_hash!)>> "!build_path!\hash_list.txt"
