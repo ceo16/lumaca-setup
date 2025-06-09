@@ -74,6 +74,24 @@ if not "%1"=="" (
 		shift
 	)
 
+    REM --- INIZIO BLOCCO DA AGGIUNGERE ---
+	if "%1"=="-fullbuild" (
+		set user_choice=1
+	)
+    REM --- FINE BLOCCO DA AGGIUNGERE ---
+
+	shift
+	goto :loop_arg
+)
+
+if not "%1"=="" (
+
+	if "%1"=="-config" (
+
+		set custom_config=%2
+		shift
+	)
+
 	shift
 	goto :loop_arg
 )
