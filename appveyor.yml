@@ -17,10 +17,6 @@ artifacts:
   - path: build\*-setup.exe
     name: Installer
 
-  # Raccoglie il file di checksum e gli dà un nome "Checksum"
-  - path: build\*-setup.exe.sha256.txt
-    name: Checksum
-
   # Raccoglie il log per il debug
   - path: build.log
 
