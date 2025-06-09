@@ -718,26 +718,36 @@ goto :eof
 
 rem Imposta il percorso corretto dove cercare il file
 if "!task!" == "get_packages" (
-	set hash_path=!download_path!
+    set "hash_path=!download_path!"
 ) else (
-	set hash_path=!build_path!
+    set "hash_path=!build_path!"
 )
 
-rem Costruisce il percorso completo del file in una variabile pulita per evitare errori di parsing
+rem Costruisce il percorso completo del file in una variabile pulita
 set "file_to_hash=!hash_path!\!package_file!"
 
-rem [DEBUG] Stampa il percorso che stiamo per usare, per essere sicuri al 100% che sia corretto
-echo [DEBUG] Sto calcolando l'hash per il file: !file_to_hash!
+rem --- SOLUZIONE DEFINITIVA ---
 
-rem Esegue PowerShell sulla variabile pulita. Questo ora funzionerà.
-for /f %%i in ('powershell -NoProfile -Command "(Get-FileHash -Path ''!file_to_hash!'' -Algorithm SHA256).Hash.ToLower()"') do (set "file_hash=%%i")
+rem [DEBUG] Stampa il percorso che stiamo per usare
+echo [DEBUG] Imposto la variabile d'ambiente per il file: !file_to_hash!
 
-rem Scrive il file di hash solo se la variabile file_hash è stata impostata correttamente
+rem Imposta una variabile d'ambiente temporanea che PowerShell puo' leggere in modo sicuro
+set FILE_TO_HASH_ENV_VAR=!file_to_hash!
+
+rem Esegue PowerShell, che legge la variabile d'ambiente invece di riceverla come argomento
+for /f %%i in ('powershell -NoProfile -Command "$the_path = $env:FILE_TO_HASH_ENV_VAR; if (Test-Path $the_path) { (Get-FileHash -Path $the_path -Algorithm SHA256).Hash.ToLower() }"') do (set "file_hash=%%i")
+
+rem Pulisce la variabile d'ambiente per non lasciare tracce
+set FILE_TO_HASH_ENV_VAR=
+
+rem Scrive il file di hash solo se l'hash e' stato calcolato con successo
 if defined file_hash (
-	if not "!task!" == "get_packages" (
-		(echo|set/P=!file_hash!)> "!build_path!\!package_file!.sha256.txt"
-		(echo %date% %time% [INFO] Created "!package_file!.sha256.txt" in "!build_path!")>> "!root_path!\%log_file%"
-	)
+    if not "!task!" == "get_packages" (
+        (echo|set/P=!file_hash!)> "!build_path!\!package_file!.sha256.txt"
+        (echo %date% %time% [INFO] Created "!package_file!.sha256.txt" in "!build_path!")>> "!root_path!\%log_file%"
+    )
+) else (
+    (echo %date% %time% [ERROR] Failed to calculate hash for !file_to_hash!)>> "!root_path!\%log_file%"
 )
 
 goto :eof
