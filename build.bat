@@ -496,7 +496,7 @@ if exist "!system_path!\resources\emulationstation\music\*.ogg" xcopy /v /y "!sy
 
 if not exist "!build_path!\system\version.info" (
 
-	(set timestamp=%date:~6,4%%date:~3,2%%date:~0,2%)
+	for /f %%i in ('powershell -c "Get-Date -Format \"yyyyMMdd\""') do (set "timestamp=%%i")
 	
 	if "%branch%" == "stable" (
 		(set release_version=%lumaca_version%-%branch%-%arch%)
