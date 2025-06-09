@@ -13,14 +13,38 @@ build_script:
 
 # Fase degli artefatti: qui raccogliamo i file creati
 artifacts:
-  # Lo script crea un installer .exe e un archivio .zip/.7z.
-  # Questi file vengono messi nella cartella di build (che lo script stesso crea).
-  # Dobbiamo dire ad AppVeyor di trovarli e salvarli.
-  # ATTENZIONE: Il percorso 'build\' potrebbe dover essere aggiustato
-  # a seconda di come lo script definisce la variabile !build_path!.
-  # Se non funziona, controlla il log per vedere dove vengono creati i file.
-  - path: 'build\*.exe'
-  - path: 'build\*.zip'
-  - path: 'build\*.7z'
-  # Raccogliamo anche il log della build per il debug
+  # Raccoglie l'installer e gli dà un nome di riferimento "Installer"
+  - path: build\*-setup.exe
+    name: Installer
+
+  # Raccoglie il file di checksum e gli dà un nome "Checksum"
+  - path: build\*-setup.exe.sha256.txt
+    name: Checksum
+
+  # Raccoglie il log per il debug
   - path: build.log
+deploy:
+  # Specifica il provider
+  - provider: GitHub
+    # Inserisci qui il tuo token criptato
+    auth_token:
+      secure: j2wYgDHRlxXaLB8MjsM3l2T+KlBA441m1r9g5cdo6nNh36f7w+iRlUv6eDtNB332
+
+    # Specifica quali artefatti caricare, usando i nomi che abbiamo definito prima
+    artifact: Installer, Checksum
+
+    # Il nome della Release su GitHub. Usiamo una variabile di AppVeyor
+    # che contiene il nome del tag Git (es. "Release v7.1.1").
+    release: 'Release $(appveyor_repo_tag_name)'
+
+    # Il tag della Release deve corrispondere a quello che ha attivato la build.
+    tag: '$(appveyor_repo_tag_name)'
+
+    # Imposta a 'false' per creare una release completa, 'true' per una pre-release.
+    prerelease: false
+
+    # Questa è la condizione di attivazione: esegui il deploy SOLO quando
+    # viene fatto il push di un tag, e non per i normali commit.
+    on:
+      branch: master # o il nome del tuo branch principale
+      tag: true  
