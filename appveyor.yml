@@ -16,7 +16,8 @@ artifacts:
   # Raccoglie l'installer e gli dà un nome di riferimento "Installer"
   - path: build\*-setup.exe
     name: Installer
-
+  - path: 'build\*-setup.exe.sha256.txt'
+    name: Checksum
   # Raccoglie il log per il debug
   - path: build.log
 
