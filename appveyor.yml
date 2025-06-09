@@ -3,11 +3,10 @@ image: Visual Studio 2022
 
 # Fase di installazione: qui prepariamo l'ambiente
 install:
-  # Installa Inno Setup usando il package manager Chocolatey.
-  # Lo script build.bat ne ha bisogno per creare l'installer.
   - ps: Write-Host "Installing Inno Setup..."
   - choco install innosetup -y
-
+  # NUOVA RIGA: Dice a Git di usare git:// invece di https:// per GitHub
+  - git config --global url."git://github.com/".insteadOf "https://github.com/"
 # Fase di build: qui eseguiamo il tuo script
 build_script:
   # Usiamo 'cmd:' per assicurarci di essere in un ambiente Command Prompt.
