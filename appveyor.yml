@@ -1,0 +1,29 @@
+# Scegli un'immagine Windows moderna che ha già molti strumenti
+image: Visual Studio 2022
+
+# Fase di installazione: qui prepariamo l'ambiente
+install:
+  # Installa Inno Setup usando il package manager Chocolatey.
+  # Lo script build.bat ne ha bisogno per creare l'installer.
+  - ps: Write-Host "Installing Inno Setup..."
+  - choco install innosetup -y
+
+# Fase di build: qui eseguiamo il tuo script
+build_script:
+  # Usiamo 'cmd:' per assicurarci di essere in un ambiente Command Prompt.
+  # Lanciamo lo script con il parametro che abbiamo aggiunto per l'automazione.
+  - cmd: 'build.bat -fullbuild'
+
+# Fase degli artefatti: qui raccogliamo i file creati
+artifacts:
+  # Lo script crea un installer .exe e un archivio .zip/.7z.
+  # Questi file vengono messi nella cartella di build (che lo script stesso crea).
+  # Dobbiamo dire ad AppVeyor di trovarli e salvarli.
+  # ATTENZIONE: Il percorso 'build\' potrebbe dover essere aggiustato
+  # a seconda di come lo script definisce la variabile !build_path!.
+  # Se non funziona, controlla il log per vedere dove vengono creati i file.
+  - path: 'build\*.exe'
+  - path: 'build\*.zip'
+  - path: 'build\*.7z'
+  # Raccogliamo anche il log della build per il debug
+  - path: build.log
