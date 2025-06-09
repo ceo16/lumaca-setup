@@ -716,25 +716,24 @@ goto :eof
 
 :hash_file
 
+rem Imposta il percorso corretto dove cercare il file
 if "!task!" == "get_packages" (
-
 	set hash_path=!download_path!
-	
 ) else (
-
 	set hash_path=!build_path!
-
 )
 
-if exist "!hash_path!\!package_file!" (
+rem Costruisce il percorso completo del file in una variabile pulita per evitare errori di parsing
+set "file_to_hash=!hash_path!\!package_file!"
 
-	for /f %%i in ('powershell -NoProfile -Command "(Get-FileHash -Path ''!hash_path!\!package_file!'' -Algorithm SHA256).Hash.ToLower()"') do (set "file_hash=%%i")
+rem [DEBUG] Stampa il percorso che stiamo per usare, per essere sicuri al 100% che sia corretto
+echo [DEBUG] Sto calcolando l'hash per il file: !file_to_hash!
 
-	if "!task!" == "get_packages" (
-REM		(echo !package_name!_sha256=!file_hash!)>> "!build_path!\hash_list.txt"
-REM		(echo %date% %time% [INFO] !package_name!_sha256=!file_hash! ^> "!build_path!\hash_list.txt")>> "!root_path!\%log_file%"
-	)
-	
+rem Esegue PowerShell sulla variabile pulita. Questo ora funzionerà.
+for /f %%i in ('powershell -NoProfile -Command "(Get-FileHash -Path ''!file_to_hash!'' -Algorithm SHA256).Hash.ToLower()"') do (set "file_hash=%%i")
+
+rem Scrive il file di hash solo se la variabile file_hash è stata impostata correttamente
+if defined file_hash (
 	if not "!task!" == "get_packages" (
 		(echo|set/P=!file_hash!)> "!build_path!\!package_file!.sha256.txt"
 		(echo %date% %time% [INFO] Created "!package_file!.sha256.txt" in "!build_path!")>> "!root_path!\%log_file%"
