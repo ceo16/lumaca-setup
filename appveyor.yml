@@ -23,28 +23,10 @@ artifacts:
 
   # Raccoglie il log per il debug
   - path: build.log
+
 deploy:
-  # Specifica il provider
   - provider: GitHub
-    # Inserisci qui il tuo token criptato
+    tag: continuous
+    release: continuous
     auth_token:
       secure: j2wYgDHRlxXaLB8MjsM3l2T+KlBA441m1r9g5cdo6nNh36f7w+iRlUv6eDtNB332
-
-    # Specifica quali artefatti caricare, usando i nomi che abbiamo definito prima
-    artifact: Installer, Checksum
-
-    # Il nome della Release su GitHub. Usiamo una variabile di AppVeyor
-    # che contiene il nome del tag Git (es. "Release v7.1.1").
-    release: 'Release $(appveyor_repo_tag_name)'
-
-    # Il tag della Release deve corrispondere a quello che ha attivato la build.
-    tag: '$(appveyor_repo_tag_name)'
-
-    # Imposta a 'false' per creare una release completa, 'true' per una pre-release.
-    prerelease: false
-
-    # Questa è la condizione di attivazione: esegui il deploy SOLO quando
-    # viene fatto il push di un tag, e non per i normali commit.
-    on:
-      branch: master # o il nome del tuo branch principale
-      tag: true  
