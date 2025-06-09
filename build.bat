@@ -541,15 +541,15 @@ if exist "!root_path!\installer\%package_file%" (
 
 	(set/A exit_code=0)
 	move /Y "!root_path!\installer\%package_file%" "!build_path!"
-(echo %date% %time% [INFO] Build "%package_file%" in "!build_path!")>> "!root_path!\%log_file%"
+(echo %date% %time% [INFO] Created "%package_file%" in "!build_path!")>> "!root_path!\%log_file%"
 )
 
-echo [DEBUG] Chiamo :hash_file da build_setup. exit_code attuale e': !exit_code!
-call :hash_file	
+rem [DEBUG] Chiamo :hash_file da create_archive. exit_code attuale e': !exit_code!
+rem call :hash_file
 
 goto :eof
 
-goto :eof
+
 
 :: ---- CREATE ARCHIVE ----
 
