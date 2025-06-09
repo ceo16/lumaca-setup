@@ -5,9 +5,7 @@ image: Visual Studio 2022
 install:
   - ps: Write-Host "Installing Inno Setup..."
   - choco install innosetup -y
-  # NUOVA RIGA: Dice a Git di usare git:// invece di https:// per GitHub
-  - git config --global --unset credential.helper
-# Fase di build: qui eseguiamo il tuo script
+
 build_script:
   # Usiamo 'cmd:' per assicurarci di essere in un ambiente Command Prompt.
   # Lanciamo lo script con il parametro che abbiamo aggiunto per l'automazione.
