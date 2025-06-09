@@ -62,7 +62,7 @@ set git_branch=master
 set branch=beta
 set release_version=null
 set log_file=build.log
-set exit_timeout=0
+set exit_timeout=5
 
 :loop_arg
 
