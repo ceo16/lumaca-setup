@@ -581,7 +581,7 @@ if exist "!build_path!\%package_file%" (
 )
 
 echo [DEBUG] Chiamo :hash_file da create_archive. exit_code attuale e': !exit_code!
-call :hash_file
+rem call :hash_file
 
 goto :eof
 
