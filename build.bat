@@ -727,10 +727,21 @@ rem Costruisce il percorso completo del file
 set "file_to_hash=!hash_path!\!package_file!"
 
 rem [DEBUG] Stampa il percorso che stiamo per usare
-echo [DEBUG] Sto calcolando l'hash con 7-Zip per il file: !file_to_hash!
+echo [DEBUG] Hashing with 7-Zip (redirect method) for file: !file_to_hash!
 
-rem --- ULTIMO TENTATIVO: usiamo 7-Zip, piu' leggero di PowerShell ---
-for /f %%i in ('"!buildtools_path!\7za.exe" h -scrcSHA256 "!file_to_hash!" ^| findstr /i "!package_file!"') do (set "file_hash=%%i")
+rem --- SOLUZIONE FINALE E DEFINITIVA ---
+rem Eseguiamo 7z e salviamo TUTTO il suo output in un file temporaneo.
+"!buildtools_path!\7za.exe" h -scrcSHA256 "!file_to_hash!" > hash_output.tmp
+
+rem Cerchiamo nel file temporaneo la riga che contiene il nome del file e l'hash.
+findstr /i "!package_file!" hash_output.tmp > hash_line.tmp
+
+rem Ora leggiamo l'hash da un file pulito che contiene una sola riga. Questo e' un metodo infallibile.
+for /f %%i in (hash_line.tmp) do (set "file_hash=%%i")
+
+rem Pulizia dei file temporanei
+if exist hash_output.tmp del hash_output.tmp
+if exist hash_line.tmp del hash_line.tmp
 
 rem Scrive il file di hash solo se la variabile file_hash e' stata impostata correttamente
 if defined file_hash (
@@ -741,7 +752,7 @@ if defined file_hash (
         (echo %date% %time% [INFO] Created "!package_file!.sha256.txt" in "!build_path!")>> "!root_path!\%log_file%"
     )
 ) else (
-    (echo %date% %time% [ERROR] Fallito il calcolo dell'hash per !file_to_hash!)>> "!root_path!\%log_file%"
+    (echo %date% %time% [ERROR] Failed to calculate hash for !file_to_hash!)>> "!root_path!\%log_file%"
 )
 
 goto :eof
