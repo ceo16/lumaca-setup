@@ -530,10 +530,18 @@ call :check_version
 set package_file=%name%-v%release_version%-setup.exe
 
 if not exist "!build_path!\%package_file%" (
-
-	if "%setup_compiler%"=="makensis" ("!compiler_path!\makensis.exe" /V4 /DRELEASE_VERSION=%release_version%  "!root_path!\installer\setup.nsi")
-	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86_64" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x64 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
-	if "%setup_compiler%"=="ISCC" if "%archx%"=="x86" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x86 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
+    echo Compiling setup with Inno Setup...
+    if "%setup_compiler%"=="ISCC" (
+        if "%archx%"=="x86_64" (
+            "!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x64 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss"
+        )
+        if "%archx%"=="x86" (
+            "!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x86 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=%disk_spanning% /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss"
+        )
+    )
+    if "%setup_compiler%"=="makensis" (
+        "!compiler_path!\makensis.exe" /V4 /DRELEASE_VERSION=%release_version% "!root_path!\installer\setup.nsi"
+    )
 )
 
 timeout/t 2 >nul
