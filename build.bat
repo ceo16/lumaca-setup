@@ -106,7 +106,7 @@ if %user_choice% NEQ 0 (
 
 	call :get_packages
 	call :set_config
-	rem call :build_setup
+	call :build_setup
 	rem call :create_archive
 	rem call :exit_door
 	goto :eof
