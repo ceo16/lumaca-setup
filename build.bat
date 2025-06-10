@@ -104,11 +104,90 @@ if %user_choice% NEQ 0 (
 
 	if %user_choice% EQU 1 (
 
-	call :get_packages
-	call :set_config
-	call :build_setup
-	rem call :create_archive
-	rem call :exit_door
+	echo [INFO] Esecuzione automatica della build completa...
+
+	rem --- Logica da :get_packages ---
+	echo [INFO] Getting required packages...
+	cd !root_path!
+	git submodule update --init --recursive
+	if "%get_lumaca_binaries%"=="1" (
+		for %%i in (txt) do (xcopy "!root_path!\*.%%i" "!build_path!" /v /y)
+		if exist "!build_path!\butler.exe" del/Q "!build_path!\butler.exe"
+	)
+	for %%i in %submodules_list% do (
+		if "!get_%%i!"=="1" (
+			set package_name=%%i
+			set destination_path=!%%i_path!
+			if "!package_name!"=="bios" (set folder=bios)
+			if "!package_name!"=="default_theme" (set folder=emulationstation\.emulationstation\themes\es-theme-carbon)
+			if "!package_name!"=="decorations" (set folder=system\decorations)
+			if "!package_name!"=="system" (set folder=system)
+			xcopy "!root_path!\!folder!" "!destination_path!\" /s /e /v /y
+		)
+	)
+	for %%i in %packages_list% do (
+		if "!get_%%i!"=="1" (
+			set package_name=%%i
+			set package_file=%%i.7z
+			set download_url=!%%i_url!
+			set destination_path=!%%i_path!
+			if "!package_name!"=="lumaca_binaries" (set package_file=%%i_%git_branch%.7z)
+			if "!package_name!"=="emulationstation" (set package_file=EmulationStation-Win32.zip)
+			if "!package_name!"=="batocera_ports" (set package_file=batocera-ports.zip)
+			if "!package_name!"=="retroarch" (set package_file=RetroArch.7z)
+			if "!package_name!"=="wiimotegun" (set package_file=WiimoteGun.zip)
+			if "!package_name!"=="default_theme" (set package_file=master.zip)
+			call :download
+			call :extract
+		)
+	)
+
+	rem --- Logica da :set_config ---
+	echo [INFO] Setting config files...
+	for /f "usebackq delims=" %%x in ("%system_path%\configgen\lumaca_tree.lst") do (if not exist "!build_path!\%%x\." md "!build_path!\%%x")
+	if exist "!build_path!\lumaca.exe" (
+		"!build_path!\lumaca.exe" /NOF #GetConfigFiles
+		"!build_path!\lumaca.exe" /NOF #SetEmulationStationSettings
+		"!build_path!\lumaca.exe" /NOF #SetEmulatorsSettings
+	)
+	if not exist "!build_path!\system\version.info" (
+		for /f %%i in ('powershell -c "Get-Date -Format \"yyyyMMdd\""') do (set "timestamp=%%i")
+		if "%branch%" == "stable" (set release_version=%lumaca_version%-%branch%-%arch%) else (set release_version=%lumaca_version%-!timestamp!-%branch%-%arch%)
+		(echo|set/P=!release_version!)> "!build_path!\system\version.info"	
+	)
+
+	rem --- Logica da :build_setup ---
+	echo [INFO] Building setup...
+	call :check_version
+	set package_file=%name%-v%release_version%-setup.exe
+	if not exist "!build_path!\%package_file%" (
+		if "%setup_compiler%"=="ISCC" (
+			if "%archx%"=="x86_64" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x64 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=yes /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
+			if "%archx%"=="x86" ("!compiler_path!\ISCC.exe" /DMyAppVersion=%release_version% /DMyAppArchitecture=x86 /DInstallerCompressionType=%installer_compression_type% /DEnableDiskSpanning=yes /DSourceDir="!build_path!" /DInstallRootUrl="%installroot_url%/repo/%arch%" "!root_path!\installer\installer.iss")
+		)
+	)
+	if exist "!root_path!\installer\%package_file%" (move /Y "!root_path!\installer\%package_file%" "!build_path!")
+	echo [INFO] Hashing the setup file...
+	call :hash_file
+
+	rem --- Logica da :create_archive ---
+	echo [INFO] Creating archive...
+	call :check_version
+	set package_file=%name%-v%release_version%.%archive_format%
+	set exclude_list=(exclude.lst hash_list.txt %name%-v%release_version%-setup.exe %name%-v%release_version%-setup.exe.sha256.txt %name%-v%release_version%.%archive_format% %name%-v%release_version%.%archive_format%.sha256.txt)
+	if not exist "!build_path!\%package_file%" (
+		if exist "!build_path!\exclude.lst" del/Q "!build_path!\exclude.lst"	
+		for %%i in %exclude_list% do ((echo "%%i")>> "!build_path!\exclude.lst")
+		!buildtools_path!\7za.exe a -t%archive_format% "!build_path!\%package_file%" "!build_path!\*" -xr@"!build_path!\exclude.lst" -mx=%archive_compression%	
+		if exist "!build_path!\exclude.lst" del/Q "!build_path!\exclude.lst"
+	)
+	echo [INFO] Hashing the archive file...
+	call :hash_file
+
+	rem --- Logica da :exit_door ---
+	echo [INFO] All tasks completed. Forcing successful exit.
+	exit /B 0
+	
 	goto :eof
 )
 	
