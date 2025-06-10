@@ -723,31 +723,25 @@ if "!task!" == "get_packages" (
     set "hash_path=!build_path!"
 )
 
-rem Costruisce il percorso completo del file in una variabile pulita
+rem Costruisce il percorso completo del file
 set "file_to_hash=!hash_path!\!package_file!"
 
-rem --- SOLUZIONE DEFINITIVA ---
-
 rem [DEBUG] Stampa il percorso che stiamo per usare
-echo [DEBUG] Imposto la variabile d'ambiente per il file: !file_to_hash!
+echo [DEBUG] Sto calcolando l'hash con 7-Zip per il file: !file_to_hash!
 
-rem Imposta una variabile d'ambiente temporanea che PowerShell puo' leggere in modo sicuro
-set FILE_TO_HASH_ENV_VAR=!file_to_hash!
+rem --- ULTIMO TENTATIVO: usiamo 7-Zip, piu' leggero di PowerShell ---
+for /f %%i in ('"!buildtools_path!\7za.exe" h -scrcSHA256 "!file_to_hash!" ^| findstr /i "!package_file!"') do (set "file_hash=%%i")
 
-rem Esegue PowerShell, che legge la variabile d'ambiente invece di riceverla come argomento
-for /f %%i in ('powershell -NoProfile -Command "$the_path = $env:FILE_TO_HASH_ENV_VAR; if (Test-Path $the_path) { (Get-FileHash -Path $the_path -Algorithm SHA256).Hash.ToLower() }"') do (set "file_hash=%%i")
-
-rem Pulisce la variabile d'ambiente per non lasciare tracce
-set FILE_TO_HASH_ENV_VAR=
-
-rem Scrive il file di hash solo se l'hash e' stato calcolato con successo
+rem Scrive il file di hash solo se la variabile file_hash e' stata impostata correttamente
 if defined file_hash (
+    rem [DEBUG] Hash calcolato con successo: !file_hash!
+    echo [DEBUG] Hash calcolato con successo: !file_hash!
     if not "!task!" == "get_packages" (
         (echo|set/P=!file_hash!)> "!build_path!\!package_file!.sha256.txt"
         (echo %date% %time% [INFO] Created "!package_file!.sha256.txt" in "!build_path!")>> "!root_path!\%log_file%"
     )
 ) else (
-    (echo %date% %time% [ERROR] Failed to calculate hash for !file_to_hash!)>> "!root_path!\%log_file%"
+    (echo %date% %time% [ERROR] Fallito il calcolo dell'hash per !file_to_hash!)>> "!root_path!\%log_file%"
 )
 
 goto :eof
