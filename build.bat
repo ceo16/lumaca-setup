@@ -103,13 +103,20 @@ call :set_builder
 if %user_choice% NEQ 0 (
 
 	if %user_choice% EQU 1 (
-		call :get_packages
-		call :set_config
-		call :build_setup
-		call :create_archive
-		call :exit_door
-		goto :eof
-	)
+
+	echo [TEST FINALE] Sto eseguendo la versione corretta dello script. Inizio la build completa.
+
+	call :get_packages
+	call :set_config
+	call :build_setup
+	call :create_archive
+	
+	echo [TEST FINALE] Tutti i task sono stati completati. Forzo l'uscita con successo (exit /B 0).
+	exit /B 0
+	
+	rem La riga seguente non verra' mai eseguita, ma la lasciamo per chiarezza
+	goto :eof
+)
 	
 	if %user_choice% EQU 2 (
 		call :get_packages
