@@ -4,7 +4,7 @@
 
 The batch script `build.bat` will download all the softwares required, set the config files and build the Lumaca Setup from `setup.nsi` sources script.
 
-- Download and install [Git for Windows](https://gitforwindows.org/) (follow default setup settings).
+- Download and install [Git for Windows](https://gitforwindows.org/) (follow default setup settings)
   
 - Download and install [Innosetup](https://jrsoftware.org/isdl.php) (follow default setup settings).
 
