@@ -12,7 +12,7 @@ setlocal EnableDelayedExpansion
 
 :: ---- BUILDER OPTION ----
 
-set lumaca_version=7.1.2
+set lumaca_version=7.2.0
 set retroarch_version=1.20.0
 
 set get_batgui=0
@@ -53,7 +53,7 @@ set emulators_black_list=(3dsen citron lemonade opengoal pico8 retroarch ryujinx
 set script_type=builder
 set user_choice=0
 set git_branch=master
-set branch=beta
+set branch=stable
 set release_version=null
 set log_file=build.log
 set exit_timeout=5
