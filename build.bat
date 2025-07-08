@@ -7,7 +7,7 @@ to set the default configuration and to build the setup from sources.
 ---------------------------------------
 :rem
 
-@echo on
+@echo off
 setlocal EnableDelayedExpansion
 
 :: ---- BUILDER OPTION ----
