@@ -1,4 +1,4 @@
-# retrobat-user tattoos
+# lumaca-user tattoos
 
 This directory can be used to add you own tattoos.
 
