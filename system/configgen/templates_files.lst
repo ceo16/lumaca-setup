@@ -88,10 +88,8 @@
 \system\templates\mupen64\Config\mupen64plus.cfg|\emulators\mupen64\Config\mupen64plus.cfg
 \system\templates\nosgba\NO$GBA.INI|\emulators\nosgba\NO$GBA.INI
 \system\templates\opengoal\config\OpenGOAL\jak1\misc\debug-settings.json|\emulators\opengoal\config\OpenGOAL\jak1\misc\debug-settings.json
-\system\templates\opengoal\config\OpenGOAL\jak1\settings\display-settings.json|\emulators\opengoal\config\OpenGOAL\jak1\settings\display-settings.json
 \system\templates\opengoal\config\OpenGOAL\jak1\settings\pc-settings.gc|\emulators\opengoal\config\OpenGOAL\jak1\settings\pc-settings.gc
 \system\templates\opengoal\config\OpenGOAL\jak2\misc\debug-settings.json|\emulators\opengoal\config\OpenGOAL\jak2\misc\debug-settings.json
-\system\templates\opengoal\config\OpenGOAL\jak2\settings\display-settings.json|\emulators\opengoal\config\OpenGOAL\jak2\settings\display-settings.json
 \system\templates\opengoal\config\OpenGOAL\jak2\settings\pc-settings.gc|\emulators\opengoal\config\OpenGOAL\jak2\settings\pc-settings.gc
 \system\templates\openjazz\openjazz.cfg|\emulators\openjazz\openjazz.cfg
 \system\templates\oricutron\oricutron.cfg|\emulators\oricutron\oricutron.cfg
@@ -163,8 +161,8 @@
 \system\templates\supermodel\NVRAM.zip|\emulators\supermodel\NVRAM
 \system\templates\supermodel\Supermodel.ini|\emulators\supermodel\Config\Supermodel.ini
 \system\templates\suyu\qt-config.ini|\emulators\suyu\user\config\qt-config.ini
-\system\templates\user\tattoos\README.md|\user\tattoos\README.md
-\system\templates\user\inputmapping\README.txt|\user\inputmapping\README.txt
+\system\templates\tattoos\README.md|\tattoos\README.md
+\system\templates\inputmapping\README.txt|\user\inputmapping\README.txt
 \system\templates\vita3k\config.yml|\emulators\vita3k\config.yml
 \system\templates\vita3k\user.xml|\saves\psvita\vita3k\ux0\user\00\user.xml
 \system\templates\winuae\winuae.ini|\emulators\winuae\winuae.ini

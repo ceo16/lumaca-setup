@@ -49,11 +49,6 @@
   (hinttitles? #t)
   (game-language 0)
   (subtitle-speaker auto)
-  (territory -1)
-  (memcard-volume-sfx 50.0000)
-  (memcard-volume-music 40.0000)
-  (memcard-volume-dialog 75.0000)
-  (memcard-vibration? #t)
   (territory 1)
   (money-starburst? #f)
   (extra-hud? #f)
@@ -61,7 +56,6 @@
   (subtitles? #t)
   (subtitle-language 0)
   (text-language 0)
-  (memcard-play-hints? #t)
   (secrets
     (cheats #x0 #x0)
     (music
