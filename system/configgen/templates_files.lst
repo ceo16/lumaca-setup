@@ -125,11 +125,12 @@
 \system\templates\retroarch\saves\reicast\nvmem_atomiswave.zip|\saves\atomiswave\reicast
 \system\templates\retroarch\saves\reicast\nvmem_naomi.zip|\saves\naomi\reicast
 \system\templates\retroarch\saves\reicast\nvmem.naomi2.zip|\saves\naomi2\reicast
-\system\templates\roms\ports\craft.libretro|\roms\ports\2048.libretro
+\system\templates\roms\ports\2048.libretro|\roms\ports\2048.libretro
+\system\templates\roms\ports\anarch.libretro|\roms\ports\anarch.libretro
 \system\templates\roms\ports\craft.libretro|\roms\ports\craft.libretro
-\system\templates\roms\ports\craft.libretro|\roms\ports\gong.libretro
-\system\templates\roms\ports\craft.libretro|\roms\ports\mrboom.libretro
-\system\templates\roms\ports\craft.libretro|\roms\ports\xrick.libretro
+\system\templates\roms\ports\gong.libretro|\roms\ports\gong.libretro
+\system\templates\roms\ports\mrboom.libretro|\roms\ports\mrboom.libretro
+\system\templates\roms\ports\xrick.libretro|\roms\ports\xrick.libretro
 \system\templates\roms\ports\gamelist.xml|\roms\ports\gamelist.xml
 \system\templates\roms\ports\images.zip|\roms\ports
 \system\templates\roms\ports\xrick.zip|\roms\ports
@@ -144,6 +145,7 @@
 \system\templates\ryujinx\portable\Config.json|\saves\switch\ryujinx\portable\Config.json
 \system\templates\scummvm\scummvm.ini|\emulators\scummvm\scummvm.ini
 \system\templates\shadps4\user\config.toml|\emulators\shadps4\user\config.toml
+\system\templates\shadps4\user\qt_ui.ini|\emulators\shadps4\user\qt_ui.ini
 \system\templates\simple64\input-profiles.ini|\emulators\simple64\input-profiles.ini
 \system\templates\simple64\input-settings.ini|\emulators\simple64\input-settings.ini
 \system\templates\simple64\mupen64plus.cfg|\emulators\simple64\mupen64plus.cfg
@@ -180,5 +182,4 @@
 \system\templates\yuzu\qt-config.ini|\emulators\yuzu\user\config\qt-config.ini
 \system\templates\zinc\renderer.cfg|\emulators\zinc\renderer.cfg
 \system\templates\zinc\zinc.cfg|\emulators\zinc\zinc.cfg
-\system\tools\SDL2.dll|\emulationstation\SDL2.dll
 \system\tools\SDL3.dll|\emulationstation\SDL3.dll
