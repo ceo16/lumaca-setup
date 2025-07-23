@@ -12,7 +12,7 @@ setlocal EnableDelayedExpansion
 
 :: ---- BUILDER OPTION ----
 
-set lumaca_version=7.2.7
+set lumaca_version=7.2.8
 set retroarch_version=1.20.0
 
 set get_batgui=0
@@ -363,7 +363,7 @@ if not exist "!build_path!\system\version.info" (
 	if "%branch%" == "stable" (
 		(set release_version=%lumaca_version%-%branch%-%arch%)
 	) else (
-		(set release_version=%lumaca_version%-!timestamp!-%branch%-%arch%)
+		(set release_version=%lumaca_version%-%branch%-%arch%)
 	)
 	(echo|set/P=!release_version!)> "!build_path!\system\version.info"	
 )
