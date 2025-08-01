@@ -1,19 +1,21 @@
 -- LUMACA LICENSE --
 
-Lumaca is a Windows softwares distribution dedicated to retrogaming and emulation.
+LUMACA is a Windows softwares distribution dedicated to retrogaming and emulation.
+This project is based on the work of the RetroBat project.
 
-Copyright (c) 2017-2019 ceo16 "Ceo"
-Copyright (c) 2020-2023 Lumaca Team
+Copyright (c) 2017-2019 Adrien Chalard ""Kayl"" (RetroBat Project)
+Copyright (c) 2020-2025 RetroBat Team (RetroBat Project)
+Copyright (c) 2025-PRESENTE ceo16 e il Lumaca Team
 
-Lumaca is free and open source project. It should not be used for commercial purposes. 
+LUMACA is free and open source project. It should not be used for commercial purposes. 
 It is done by a team of enthusiasts in their free time mainly for fun.
-All the code written by Lumaca Team, unless covered by a licence from an upstream project, is given under the LGPL v3 licence.
+All the code written by the Lumaca Team, unless covered by a licence from an upstream project, is given under the LGPL v3 licence.
 See https://www.gnu.org/licenses.
 
-It is not allowed to sell Lumaca on a pre-installed machine or on any storage devices. 
-Lumaca includes softwares which cannot be associated with any commercial activities.
-Shipping Lumaca with additional proprietary and copyrighted content is illegal, strictly forbidden and strongly discouraged by the Lumaca Team.
-Otherwise, you can start a new project off Lumaca sources if you follow the same conditions.
+It is not allowed to sell LUMACA on a pre-installed machine or on any storage devices. 
+LUMACA includes softwares which cannot be associated with any commercial activities.
+Shipping LUMACA with additional proprietary and copyrighted content is illegal, strictly forbidden and strongly discouraged by the Lumaca Team.
+Otherwise, you can start a new project off LUMACA sources if you follow the same conditions.
 
-Finally, the license which concerns the entire Lumaca Project as a work, in particular the written or graphic content broadcast on its various media, is conditioned by the terms of the CC BY-NC-SA 4.0 license.
-See https://creativecommons.org/licenses/by-nc-sa/4.0.
+Finally, the license which concerns the entire LUMACA Project as a work, in particular the written or graphic content broadcast on its various media, is conditioned by the terms of the CC BY-NC-SA 4.0 license.
+See https://creativecommons.org/licenses/by-nc-sa/4.0."
