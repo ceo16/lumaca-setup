@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <upgradeinfo>
-  <neveroverwrite path="lumaca.ini"/>
+  <neveroverwrite path="retrobat.ini"/>
   <neveroverwrite path="emulationstation\.emulationstation\es_settings.cfg"/>
   <neveroverwrite path="emulationstation\.emulationstation\es_input.cfg"/>
   <neveroverwrite path="emulators\altirra\Altirra.ini"/>

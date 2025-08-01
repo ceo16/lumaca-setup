@@ -40,7 +40,7 @@ LogitechG29:
   Gear4: button15
   GearN: button18
   Service: button10
-    Test: button11
+  Test: button11
 ThrustmasterT300RSPS3:
   DeportedShifter: true
   Up: hatup
